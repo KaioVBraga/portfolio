@@ -12,14 +12,20 @@ export const Container = styled.div<ContainerProps>`
   padding: 24px;
   color: #fff;
 
-  background: no-repeat center / 100%
-    url("https://preview.colorlib.com/theme/unfold/images/xcover_bg_2.jpg.pagespeed.ic.80gbjoZ17c.webp");
+  /* background: no-repeat center / 100%
+    url("https://preview.colorlib.com/theme/unfold/images/xcover_bg_2.jpg.pagespeed.ic.80gbjoZ17c.webp"); */
+
+  background-image: url("https://preview.colorlib.com/theme/unfold/images/xcover_bg_2.jpg.pagespeed.ic.80gbjoZ17c.webp");
+  background-size: cover;
+  background-position: 50% 46%;
+  background-repeat: repeat;
+  width: 100%;
 
   > main {
     display: flex;
     justify-content: center;
     min-height: 100%;
-    padding-bottom: 120px;
+    padding-bottom: 98px;
 
     > section {
       display: flex;
@@ -31,12 +37,13 @@ export const Container = styled.div<ContainerProps>`
 
       > h1 {
         font-size: 80px;
-        margin-bottom: 16px;
+        margin-bottom: 22px;
       }
 
       > p {
-        font-size: 32px;
+        font-size: 33px;
         text-align: center;
+        line-height: 1.5;
       }
     }
   }

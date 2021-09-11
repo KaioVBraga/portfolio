@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Container, Input, Button } from "./styles";
+import { Container, ItemsList } from "./styles";
 
 const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
   return (
     <Container>
-      <ul>
+      <ItemsList align="right">
         <li>
           <a>Home</a>
         </li>
@@ -17,11 +17,11 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
         <li>
           <a>Services</a>
         </li>
-      </ul>
+      </ItemsList>
 
       <h2>Unfold</h2>
 
-      <ul>
+      <ItemsList align="left">
         <li>
           <a>Skills</a>
         </li>
@@ -34,7 +34,7 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
         <li>
           <a>Contact</a>
         </li>
-      </ul>
+      </ItemsList>
     </Container>
   );
 };

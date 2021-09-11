@@ -18,7 +18,7 @@ export const Container = styled.div`
     }
   }
 
-  > *:not(:last-child) {
+  /* > *:not(:last-child) {
     margin-bottom: 16px;
-  }
+  } */
 `;

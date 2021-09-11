@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
-import { Container, Input, Button } from "./styles";
+import { Container } from "./styles";
 
-const Navbar: React.FC<NavbarProps> = (props) => {
+const Hero: React.FC = () => {
   return (
     <Container>
       <header>
@@ -20,4 +20,4 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   );
 };
 
-export default Navbar;
+export default Hero;

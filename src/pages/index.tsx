@@ -5,6 +5,7 @@ import { ICardYoutube } from "../@types/Components/Molecules/CardYoutube/types";
 import { YoutubeVideoResponse } from "../@types/Pages/Home/types";
 import Navbar from "../components/Organisms/Navbar";
 import Hero from "../components/Organisms/Hero";
+import ProjectsGrid from "../components/Organisms/ProjectsGrid";
 import TemplateHome from "../components/Templates/Home";
 import api from "../services/apis";
 
@@ -12,7 +13,9 @@ const Home: NextPage = () => {
   return (
     <TemplateHome>
       {/* <Navbar /> */}
+
       <Hero />
+      <ProjectsGrid />
     </TemplateHome>
   );
 };

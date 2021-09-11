@@ -29,16 +29,49 @@ export const Container = styled.div<ContainerProps>`
     }
 
     *:not(:last-child) {
-      margin-right: 16px;
+      margin-right: 18px;
     }
   }
 
   > h2 {
-    font-size: 28px;
+    font-size: 27px;
+    margin-right: 76px !important;
   }
 
   *:not(:last-child) {
-    margin-right: 80px;
+    margin-right: 70px;
+  }
+`;
+
+interface ItemsList {
+  align?: string;
+}
+
+export const ItemsList = styled.div<ItemsList>`
+  display: flex;
+  list-style: none;
+  width: 100%;
+
+  ${(props) =>
+    (props.align === "left" && "justify-content: flex-start;") ||
+    (props.align === "right" && "justify-content: flex-end;") ||
+    (props.align === "center" && "justify-content: center;")}
+
+  > li {
+    > a {
+      cursor: pointer;
+      font-size: 14px;
+      transition: var(--fast-transition);
+
+      :hover {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+
+  *:not(:last-child) {
+    margin-right: 18px;
   }
 `;
 
