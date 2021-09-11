@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         <section>
           <h1>Unfold</h1>
           <p>
-            I'm Glenn Chapman Hoyer A Product Designer Based In San Francisco
+            I’m Glenn Chapman Hoyer A Product Designer Based In San Francisco
           </p>
         </section>
       </main>

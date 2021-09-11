@@ -19,6 +19,7 @@ export const Container = styled.div<ContainerProps>`
   background-size: cover;
   background-position: 50% 46%;
   background-repeat: repeat;
+  background-attachment: fixed;
   width: 100%;
 
   > main {
