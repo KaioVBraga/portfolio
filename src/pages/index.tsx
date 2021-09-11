@@ -6,6 +6,7 @@ import { YoutubeVideoResponse } from "../@types/Pages/Home/types";
 import Navbar from "../components/Organisms/Navbar";
 import Hero from "../components/Organisms/Hero";
 import ProjectsGrid from "../components/Organisms/ProjectsGrid";
+import CompaniesCarousel from "../components/Organisms/CompaniesCarousel";
 import TemplateHome from "../components/Templates/Home";
 import api from "../services/apis";
 
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
 
       <Hero />
       <ProjectsGrid />
+      <CompaniesCarousel />
     </TemplateHome>
   );
 };
