@@ -4,51 +4,54 @@ interface ContainerProps {}
 
 export const Container = styled.div<ContainerProps>`
   width: 100%;
-  /* max-width: 1140px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: #000;
-  min-height: 100vh;
   align-items: center;
-  /* padding: 12px; */
+  background-color: #000;
   color: #fff;
 
-  width: 100%;
-
-  > header {
+  > section {
     width: 100%;
-    max-width: 1110px;
-    padding: 12px;
-    margin-bottom: 24px;
-
-    > h1 {
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  > main {
+    max-width: 1140px;
     display: flex;
-    justify-content: center;
-    min-height: 100%;
-    padding-bottom: 98px;
-    max-width: 1110px;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    align-items: center;
+    padding: 32px;
 
-    > ul {
+    > header {
+      width: 100%;
+      margin-bottom: 40px;
+
+      > h1 {
+        width: 100%;
+        text-align: left;
+        font-size: 36px;
+      }
+    }
+
+    > main {
       display: flex;
-      flex-direction: column;
-      > li {
-        list-style: none;
+      justify-content: center;
+      min-height: 100%;
+      padding-bottom: 98px;
 
-        > img {
-          width: 328px;
+      > ul {
+        display: flex;
+        flex-direction: column;
+        > li {
+          list-style: none;
+
+          > img {
+            width: 328px;
+          }
+
+          margin-bottom: 32px;
         }
 
-        margin-bottom: 32px;
+        margin-right: 32px;
       }
-
-      margin-right: 32px;
     }
   }
 `;
