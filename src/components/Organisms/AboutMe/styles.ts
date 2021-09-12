@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface ContainerProps {}
 
 export const Container = styled.div<ContainerProps>`
-  padding-top: 120px;
+  padding: 120px 0px 100px 0px;
 
   width: 100%;
   display: flex;
@@ -40,10 +40,28 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const ImageContainer = styled.div<ContainerProps>`
+  position: relative;
   padding: 0px 100px 0px 40px;
 
   > img {
+    position: relative;
     width: 100%;
+    z-index: 1;
+  }
+
+  :before {
+    display: block;
+    height: 240px;
+    width: 240px;
+    position: absolute;
+    z-index: 0;
+    bottom: -50px;
+    right: 45px;
+    content: "";
+    background-image: url("https://preview.colorlib.com/theme/unfold/images/xdotted_light.png.pagespeed.ic.h7RVVSENpI.png");
+    background-size: cover;
+    background-position: 50% 46%;
+    background-repeat: repeat;
   }
 `;
 
