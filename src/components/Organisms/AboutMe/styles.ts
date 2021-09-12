@@ -73,10 +73,10 @@ export const TextContainer = styled.div<ContainerProps>`
   }
 
   > p {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
-    line-height: 2;
-    margin-top: 16px;
+    line-height: 1.8;
+    margin-top: 32px;
     > a {
       color: #d63447;
       text-decoration: none;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../../Atoms/Button";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import ProjectItem from "../../Molecules/ProjectItem";
 import { Container, ImageContainer, TextContainer } from "./styles";
@@ -27,11 +28,9 @@ const AboutMe: React.FC = (props) => {
               with the necessary regelialia. It is a paradisematic country, in
               which roasted parts of sentences fly into your mouth.
             </p>
-            {/* <p>
-              <a href="#" class="btn btn-outline-pill btn-custom-light">
-                Download my CV
-              </a>
-            </p> */}
+            <p>
+              <Button>DOWNLOAD MY CV</Button>
+            </p>
           </TextContainer>
         </main>
       </section>
