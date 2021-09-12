@@ -8,6 +8,7 @@ import Hero from "../components/Organisms/Hero";
 import ProjectsGrid from "../components/Organisms/ProjectsGrid";
 import CompaniesCarousel from "../components/Organisms/CompaniesCarousel";
 import AboutMe from "../components/Organisms/AboutMe";
+import ServicesGrid from "../components/Organisms/ServicesGrid";
 import TemplateHome from "../components/Templates/Home";
 import api from "../services/apis";
 
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <ProjectsGrid />
       <CompaniesCarousel />
       <AboutMe />
+      <ServicesGrid />
     </TemplateHome>
   );
 };
