@@ -9,6 +9,7 @@ import ProjectsGrid from "../components/Organisms/ProjectsGrid";
 import CompaniesCarousel from "../components/Organisms/CompaniesCarousel";
 import AboutMe from "../components/Organisms/AboutMe";
 import ServicesGrid from "../components/Organisms/ServicesGrid";
+import SkillsGrid from "../components/Organisms/SkillsGrid";
 import TemplateHome from "../components/Templates/Home";
 import api from "../services/apis";
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <CompaniesCarousel />
       <AboutMe />
       <ServicesGrid />
+      <SkillsGrid />
     </TemplateHome>
   );
 };
