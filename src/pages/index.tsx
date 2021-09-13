@@ -11,6 +11,7 @@ import AboutMe from "../components/Organisms/AboutMe";
 import ServicesGrid from "../components/Organisms/ServicesGrid";
 import SkillsGrid from "../components/Organisms/SkillsGrid";
 import TestimonialsCarousel from "../components/Organisms/TestimonialsCarousel";
+import JournalGrid from "../components/Organisms/JournalGrid";
 import TemplateHome from "../components/Templates/Home";
 import api from "../services/apis";
 
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <ServicesGrid />
       <SkillsGrid />
       <TestimonialsCarousel />
+      <JournalGrid />
     </TemplateHome>
   );
 };
