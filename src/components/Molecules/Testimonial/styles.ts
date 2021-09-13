@@ -14,9 +14,9 @@ export const Container = styled.div<ContainerProps>`
   > main {
     position: relative;
     min-height: 200px;
-    width: 1000px;
+    width: 1066px;
     background-color: #212121;
-    padding: 32px 64px 96px 64px;
+    padding: 32px 56px 96px 56px;
     font-size: 24px;
     display: flex;
     flex-direction: column;
@@ -24,9 +24,9 @@ export const Container = styled.div<ContainerProps>`
     z-index: 1;
 
     > span {
-      font-size: 100px;
+      font-size: 80px;
       font-family: Georgia !important;
-      height: 100px;
+      height: 70px;
     }
 
     > blockquote {
@@ -58,7 +58,7 @@ export const Container = styled.div<ContainerProps>`
 
     > img {
       border-radius: 50%;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
     }
 
     > h3 {
