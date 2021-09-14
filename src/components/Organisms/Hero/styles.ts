@@ -8,7 +8,7 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
+  min-height: 120vh;
   padding: 24px;
   color: #fff;
   width: 100%;
@@ -17,6 +17,8 @@ export const Container = styled.div<ContainerProps>`
   > main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     min-height: 100%;
     padding-bottom: 98px;
     z-index: 2;
@@ -68,30 +70,50 @@ export const Container = styled.div<ContainerProps>`
   }
 `;
 
-interface InputProps {}
+export const Finger = styled.div`
+  position: relative;
+  height: 42px;
+  width: 22px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  top: 60px;
 
-export const Input = styled.input<InputProps>`
-  background-color: #121212;
-  border: #333333 1px solid;
-  height: 50px;
-  width: 100%;
-  color: #fff;
-  padding: 16px;
-`;
+  :after {
+    content: "SCROLL";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 10px;
+  }
 
-interface ButtonProps {}
+  > span {
+    width: min-content;
+    height: min-content;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 3px;
+    width: 3px;
+    animation: finger 2s infinite;
+    margin-left: -1px;
+  }
 
-export const Button = styled.button<ButtonProps>`
-  background-color: #333333;
-  border: #333333 1px solid;
-  height: 50px;
-  width: min-content;
-  color: #616161;
-  padding: 16px;
-  cursor: pointer;
-  transition: var(--fast-transition);
-
-  :hover {
-    color: #888;
+  @keyframes finger {
+    from {
+      transform: translate(0px, 8px);
+      opacity: 1;
+    }
+    to {
+      transform: translate(0px, 24px);
+      opacity: 0.25;
+    }
   }
 `;

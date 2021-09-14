@@ -1,6 +1,6 @@
 import React from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
-import { Container } from "./styles";
+import { Container, Finger } from "./styles";
 
 const Hero: React.FC = () => {
   return (
@@ -14,6 +14,11 @@ const Hero: React.FC = () => {
           <p>
             I’m Glenn Chapman Hoyer A Product Designer Based In San Francisco
           </p>
+        </section>
+        <section>
+          <Finger>
+            <span></span>
+          </Finger>
         </section>
       </main>
     </Container>
