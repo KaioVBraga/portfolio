@@ -11,6 +11,8 @@ export const Container = styled.div`
   background-color: #181818;
   overflow-y: scroll;
   overflow-x: hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
 
   > section {
     min-width: 496px;

@@ -9,6 +9,7 @@ export default memo(createGlobalStyle`
     outline: none;
     border: none;
     font-family: var(--fonts) !important;
+    z-index: 1;
   }
 
   html, body, #root {
