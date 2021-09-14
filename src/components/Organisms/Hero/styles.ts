@@ -104,6 +104,7 @@ export const Finger = styled.div`
     width: 3px;
     animation: finger 2s infinite;
     margin-left: -1px;
+    transform: translate(0px, 8px);
   }
 
   @keyframes finger {
