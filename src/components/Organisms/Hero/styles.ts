@@ -110,7 +110,7 @@ export const Finger = styled.div`
   @keyframes finger {
     from {
       transform: translate(0px, 8px);
-      opacity: 1;
+      opacity: 0.75;
     }
     to {
       transform: translate(0px, 24px);
