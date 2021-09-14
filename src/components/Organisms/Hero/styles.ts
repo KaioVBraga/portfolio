@@ -64,7 +64,7 @@ export const Container = styled.div<ContainerProps>`
 
     z-index: -1;
     transform-origin: center center 0;
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-5px) scale(6);
   }
 `;
 
