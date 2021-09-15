@@ -57,6 +57,10 @@ export const ItemsList = styled.div<ItemsList>`
     (props.align === "right" && "justify-content: flex-end;") ||
     (props.align === "center" && "justify-content: center;")}
 
+  > li {
+    margin-top: 18px;
+  }
+
   *:not(:last-child) {
     margin-right: 18px;
   }
