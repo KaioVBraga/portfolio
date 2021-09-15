@@ -1,6 +1,4 @@
-import React, { useState, useCallback } from "react";
-import HeroNavbar from "../../Molecules/HeroNavbar";
-import ProjectItem from "../../Molecules/ProjectItem";
+import React, { useState } from "react";
 import { Container } from "./styles";
 import Carousel from "nuka-carousel";
 
