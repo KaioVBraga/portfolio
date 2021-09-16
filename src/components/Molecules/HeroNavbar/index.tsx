@@ -3,6 +3,8 @@ import { Container, ItemsList } from "./styles";
 import ListItem from "../../Atoms/ListItem";
 
 const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const leftItems = [
     {
       text: "Home",
@@ -37,7 +39,9 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
     <Container>
       <ItemsList align="right">
         {leftItems.map((item, index) => (
-          <ListItem key={index}>{item.text}</ListItem>
+          <ListItem key={index} active={index === activeIndex}>
+            {item.text}
+          </ListItem>
         ))}
       </ItemsList>
 
@@ -45,7 +49,9 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
 
       <ItemsList align="left">
         {rightItems.map((item, index) => (
-          <ListItem key={index}>{item.text}</ListItem>
+          <ListItem key={index} active={index + 4 === activeIndex}>
+            {item.text}
+          </ListItem>
         ))}
       </ItemsList>
     </Container>

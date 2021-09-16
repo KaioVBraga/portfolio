@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-interface ContainerProps {}
+interface ContainerProps {
+  active?: boolean;
+}
 
 export const Container = styled.li<ContainerProps>`
   width: min-content;
@@ -26,6 +28,14 @@ export const Container = styled.li<ContainerProps>`
 
     border-bottom: 1px solid #fff;
   }
+
+  ${(props) =>
+    props.active &&
+    `
+    > div {
+      width: 100%;
+    }
+    `}
 
   :hover {
     > div {

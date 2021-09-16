@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Container } from "./styles";
 
-const ListItem: React.FC = (props) => {
+interface ListItemProps {
+  active?: boolean;
+}
+
+const ListItem: React.FC<ListItemProps> = (props) => {
   return (
-    <Container>
+    <Container active={props.active}>
       <a>{props.children}</a>
       <div></div>
     </Container>
