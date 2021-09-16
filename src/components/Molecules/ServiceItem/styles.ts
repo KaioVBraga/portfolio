@@ -8,7 +8,7 @@ export const Container = styled.div<ContainerProps>`
   align-items: flex-start;
   position: relative;
   cursor: pointer;
-  max-width: 300px;
+  max-width: 290px;
   font-weight: 300;
 
   > img {
@@ -17,7 +17,13 @@ export const Container = styled.div<ContainerProps>`
   }
 
   > p {
-    line-height: 1.5;
+    font-size: 16px !important;
+    line-height: 1.7;
+  }
+
+  > h2 {
+    font-size: 22px;
+    margin-bottom: 10px !important;
   }
 
   > *:not(:last-child) {

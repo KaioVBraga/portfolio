@@ -14,8 +14,8 @@ const ServiceItem: React.FC<ServiceItemProps> = (props) => {
       <img
         src={props.image}
         alt={props.title || ""}
-        width="50px"
-        height="50px"
+        width="45px"
+        height="45px"
       />
       <h2>
         {props.title?.split(" ").map((word, index, array) => (

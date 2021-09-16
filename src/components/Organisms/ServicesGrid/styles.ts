@@ -18,7 +18,7 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
     min-height: 100vh;
     align-items: center;
-    padding: 32px;
+    padding: 32px 15px 32px 15px;
 
     > header {
       display: flex;
@@ -35,13 +35,17 @@ export const Container = styled.div<ContainerProps>`
 
     > main {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      /* justify-content: center; */
       min-height: 100%;
+      width: 100%;
       padding-bottom: 98px;
 
       > ul {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+
         > li {
           list-style: none;
 
@@ -49,9 +53,11 @@ export const Container = styled.div<ContainerProps>`
             width: 328px;
           }
 
-          margin-bottom: 32px;
+          margin-bottom: 42px;
         }
+      }
 
+      > ul:not(:last-child) {
         margin-right: 32px;
       }
     }

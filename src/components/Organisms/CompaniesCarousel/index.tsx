@@ -19,6 +19,7 @@ const CompaniesCarousel: React.FC = (props) => {
           renderCenterLeftControls={null}
           renderCenterRightControls={null}
           wrapAround={true}
+          // easing="easeCubic(0.25)"
         >
           {[...images, ...images].map((image) => (
             <img src={image} />
