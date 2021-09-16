@@ -34,6 +34,10 @@ export const Container = styled.div<ContainerProps>`
 
   > h2 {
     font-size: 28px;
+
+    > span {
+      color: #d63447 !important;
+    }
   }
 
   *:not(:last-child) {

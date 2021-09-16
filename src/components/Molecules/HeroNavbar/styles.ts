@@ -35,11 +35,16 @@ export const Container = styled.div<ContainerProps>`
 
   > h2 {
     font-size: 27px;
-    margin-right: 76px !important;
+    margin-right: 71px !important;
+    margin-top: -2px !important;
+
+    > span {
+      color: #d63447 !important;
+    }
   }
 
   *:not(:last-child) {
-    margin-right: 70px;
+    margin-right: 69px;
   }
 `;
 
@@ -58,7 +63,7 @@ export const ItemsList = styled.div<ItemsList>`
     (props.align === "center" && "justify-content: center;")}
 
   > li {
-    margin-top: 18px;
+    margin-top: 17px;
   }
 
   *:not(:last-child) {

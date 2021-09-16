@@ -23,7 +23,7 @@ export const Container = styled.li<ContainerProps>`
   > div {
     width: 0;
     height: 1px;
-    margin-top: 16px;
+    margin-top: 15px;
     transition: var(--transition);
 
     border-bottom: 1px solid #fff;

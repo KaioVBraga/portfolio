@@ -53,12 +53,12 @@ export const Container = styled.div<ContainerProps>`
 
     background-image: url("https://preview.colorlib.com/theme/unfold/images/xcover_bg_2.jpg.pagespeed.ic.80gbjoZ17c.webp");
     background-size: cover;
-    background-position: 50% 46%;
+    background-position: 50% 48%;
     background-repeat: repeat;
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: -3%;
     right: 0;
     bottom: 0;
 

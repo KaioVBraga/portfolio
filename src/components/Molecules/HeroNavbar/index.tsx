@@ -45,7 +45,9 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
         ))}
       </ItemsList>
 
-      <h2>Unfold</h2>
+      <h2>
+        Unfold<span>.</span>
+      </h2>
 
       <ItemsList align="left">
         {rightItems.map((item, index) => (
