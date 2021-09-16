@@ -18,7 +18,7 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
     min-height: 100vh;
     align-items: center;
-    padding: 32px;
+    padding: 32px 16px 32px 16px;
 
     > header {
       width: 100%;
@@ -33,7 +33,8 @@ export const Container = styled.div<ContainerProps>`
 
     > main {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      /* justify-content: center; */
       min-height: 100%;
       padding-bottom: 98px;
 
@@ -49,7 +50,9 @@ export const Container = styled.div<ContainerProps>`
 
           margin-bottom: 32px;
         }
+      }
 
+      > ul:not(:last-child) {
         margin-right: 32px;
       }
     }
