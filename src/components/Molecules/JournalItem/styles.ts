@@ -10,7 +10,7 @@ export const Container = styled.div<ContainerProps>`
   cursor: pointer;
   width: 100%;
   font-weight: 300;
-  padding: 12px;
+  padding: 10px;
 
   > img {
     position: relative;
