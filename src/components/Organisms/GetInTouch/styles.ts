@@ -48,6 +48,7 @@ export const FormContainer = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 630px;
 
   > fieldset {
     margin: 16px 0 40px 0;
@@ -64,10 +65,13 @@ export const FormContainer = styled.div<ContainerProps>`
       font-weight: 300;
       font-size: 16px;
 
-      margin-right: 16px;
+      :not(:last-child) {
+        margin-right: 32px;
+      }
 
       ::placeholder {
-        color: rgba(255, 255, 255, 0.5);
+        opacity: 0.7;
+        color: rgba(255, 255, 255);
         font-weight: 700;
         font-size: 12px;
       }
@@ -91,10 +95,11 @@ export const FormContainer = styled.div<ContainerProps>`
       font-weight: 300;
       font-size: 16px;
 
-      margin-right: 16px;
+      /* margin-right: 16px; */
 
       ::placeholder {
-        color: rgba(255, 255, 255, 0.5);
+        opacity: 0.7;
+        color: rgba(255, 255, 255);
         font-weight: 700;
         font-size: 12px;
       }
