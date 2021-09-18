@@ -53,7 +53,7 @@ export const Container = styled.div<ContainerProps>`
 
     background-image: url("https://preview.colorlib.com/theme/unfold/images/xcover_bg_2.jpg.pagespeed.ic.80gbjoZ17c.webp");
     background-size: cover;
-    background-position: 50% 48%;
+    background-position: 50% 49%;
     background-repeat: repeat;
 
     position: absolute;
@@ -66,7 +66,14 @@ export const Container = styled.div<ContainerProps>`
 
     z-index: -1;
     transform-origin: center center 0;
-    transform: translateZ(-5px) scale(6);
+    /* transform: translateZ(-5px) scale(6); */
+    transform: translate3d(0px, 0px, -5px) scale(5.95);
+
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
   }
 `;
 
