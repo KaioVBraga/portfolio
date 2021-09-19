@@ -1,15 +1,74 @@
+// import styled from "styled-components";
+
+// interface ContainerProps {}
+
+// export const Container = styled.div<ContainerProps>`
+//   width: 100%;
+//   height: 60px;
+//   /* height: max-content; */
+//   display: flex;
+//   background-color: #fff;
+//   align-items: center;
+//   justify-content: center;
+
+//   z-index: 2;
+
+//   > ul {
+//     display: flex;
+//     list-style: none;
+
+//     > li {
+//       > a {
+//         cursor: pointer;
+//         font-size: 14px;
+//         transition: var(--fast-transition);
+
+//         :hover {
+//           color: #d63447;
+//         }
+//       }
+//     }
+
+//     *:not(:last-child) {
+//       margin-right: 16px;
+//     }
+//   }
+
+//   > h2 {
+//     font-size: 28px;
+
+//     > span {
+//       color: #d63447 !important;
+//     }
+//   }
+
+//   *:not(:last-child) {
+//     margin-right: 80px;
+//   }
+// `;
+
 import styled from "styled-components";
 
-interface ContainerProps {}
+interface ContainerProps {
+  displayNavbar?: boolean;
+}
 
 export const Container = styled.div<ContainerProps>`
   width: 100%;
-  height: 60px;
+  height: max-content;
   /* height: max-content; */
   display: flex;
-  background-color: #fff;
   align-items: center;
   justify-content: center;
+  color: #fff;
+  background-color: #fff;
+  z-index: 10;
+  padding: 4px 0 4px 0;
+  position: fixed;
+  top: -60px;
+  transition: var(--transition);
+
+  ${(props) => props.displayNavbar && `transform: translateY(60px);`}
 
   > ul {
     display: flex;
@@ -22,18 +81,22 @@ export const Container = styled.div<ContainerProps>`
         transition: var(--fast-transition);
 
         :hover {
-          color: #d63447;
+          padding-bottom: 16px;
+          border-bottom: 1px solid #fff;
         }
       }
     }
 
     *:not(:last-child) {
-      margin-right: 16px;
+      margin-right: 18px;
     }
   }
 
   > h2 {
-    font-size: 28px;
+    font-size: 27px;
+    margin-right: 71px !important;
+    margin-top: -2px !important;
+    color: #000 !important;
 
     > span {
       color: #d63447 !important;
@@ -41,34 +104,35 @@ export const Container = styled.div<ContainerProps>`
   }
 
   *:not(:last-child) {
-    margin-right: 80px;
+    margin-right: 69px;
   }
 `;
 
-interface InputProps {}
+interface ItemsList {
+  align?: string;
+}
 
-export const Input = styled.input<InputProps>`
-  background-color: #121212;
-  border: #333333 1px solid;
-  height: 50px;
+export const ItemsList = styled.div<ItemsList>`
+  display: flex;
+  list-style: none;
   width: 100%;
-  color: #fff;
-  padding: 16px;
-`;
 
-interface ButtonProps {}
+  ${(props) =>
+    (props.align === "left" && "justify-content: flex-start;") ||
+    (props.align === "right" && "justify-content: flex-end;") ||
+    (props.align === "center" && "justify-content: center;")}
 
-export const Button = styled.button<ButtonProps>`
-  background-color: #333333;
-  border: #333333 1px solid;
-  height: 50px;
-  width: min-content;
-  color: #616161;
-  padding: 16px;
-  cursor: pointer;
-  transition: var(--fast-transition);
+  > li {
+    margin-top: 17px;
+    transition: var(--fast-transition);
+    color: #000000;
 
-  :hover {
-    color: #888;
+    :hover {
+      color: #d63447 !important;
+    }
+  }
+
+  *:not(:last-child) {
+    margin-right: 18px;
   }
 `;

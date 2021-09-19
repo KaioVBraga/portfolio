@@ -18,11 +18,14 @@ import TemplateHome from "../components/Templates/Home";
 import api from "../services/apis";
 
 const Home: NextPage = () => {
-  return (
-    <TemplateHome>
-      {/* <Navbar /> */}
+  const [goingUp, setGoingUp] = useState(false);
+  const [isDisplayingHero, setIsDisplayingHero] = useState(false);
 
-      <Hero />
+  return (
+    <TemplateHome setGoingUp={setGoingUp}>
+      <Navbar displayNavbar={goingUp && !isDisplayingHero} />
+
+      <Hero setIsDisplayingHero={setIsDisplayingHero} />
       <ProjectsGrid />
       <CompaniesCarousel />
       <AboutMe />

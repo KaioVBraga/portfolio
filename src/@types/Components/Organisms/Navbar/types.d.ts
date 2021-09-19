@@ -1,1 +1,3 @@
-interface NavbarProps {}
+interface NavbarProps {
+  displayNavbar: boolean;
+}

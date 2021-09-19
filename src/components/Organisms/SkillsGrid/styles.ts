@@ -17,7 +17,7 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
+    padding: 32px 0px 32px 0px;
 
     > header {
       display: flex;
@@ -34,7 +34,8 @@ export const Container = styled.div<ContainerProps>`
 
     > main {
       display: flex;
-      justify-content: space-between;
+      /* justify-content: space-between; */
+      justify-content: space-around;
       width: 100%;
     }
   }

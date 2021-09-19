@@ -13,12 +13,32 @@ export const Container = styled.div<ContainerProps>`
 
   > section {
     width: 100%;
-    display: flex;
-    align-items: center;
     max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    > img {
+    > header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > h1 {
+        font-size: 32px;
+        margin-bottom: 32px;
+      }
+
+      margin-bottom: 80px;
+    }
+
+    > main {
       width: 100%;
+      display: flex;
+      align-items: center;
+
+      > img {
+        width: 100%;
+      }
     }
   }
 `;

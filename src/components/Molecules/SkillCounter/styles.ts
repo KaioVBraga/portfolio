@@ -12,12 +12,14 @@ export const Container = styled.div<ContainerProps>`
   > div {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 4px;
 
     > span:first-of-type {
       font-family: Arimo !important;
       color: #d63447;
-      font-size: 69px;
+      font-size: 70px;
       font-weight: 500;
+      margin-right: 4px;
     }
 
     > span:last-of-type {
