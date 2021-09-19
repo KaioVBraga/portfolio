@@ -26,7 +26,7 @@ export const Container = styled.div<ContainerProps>`
 export const Content = styled.div`
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 16px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

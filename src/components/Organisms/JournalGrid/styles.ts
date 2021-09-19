@@ -20,7 +20,7 @@ export const Container = styled.div<ContainerProps>`
     min-height: 100vh;
     align-items: center;
     /* padding: 32px; */
-    padding: 32px 16px 32px 16px;
+    padding: 32px 5px 32px 5px;
 
     > header {
       display: flex;
