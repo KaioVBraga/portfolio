@@ -42,18 +42,23 @@ export const Container = styled.div<ContainerProps>`
 
 export const ImageContainer = styled.div<ContainerProps>`
   position: relative;
-  padding: 0px 100px 0px 40px;
+  /* padding: 0px 100px 0px 40px; */
+  padding: 0px 98px 0px 16px;
 
   > img {
     position: relative;
     width: 100%;
     z-index: 1;
+    top: 3px;
+    left: 2px;
   }
 
   :before {
     display: block;
-    height: 240px;
-    width: 240px;
+    /* height: 240px;
+    width: 240px; */
+    height: 230px;
+    width: 230px;
     position: absolute;
     z-index: 0;
     bottom: -50px;
@@ -67,14 +72,15 @@ export const ImageContainer = styled.div<ContainerProps>`
 `;
 
 export const TextContainer = styled.div<ContainerProps>`
-  padding: 0px 40px;
+  /* padding: 0px 40px; */
+  padding: 0px 40px 0 16px;
 
   > h3 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   > p {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 1.8;
     margin-top: 32px;
@@ -87,5 +93,9 @@ export const TextContainer = styled.div<ContainerProps>`
         color: #ffffff;
       }
     }
+  }
+
+  > p:first-of-type {
+    font-size: 18px;
   }
 `;
