@@ -8,7 +8,8 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 120vh;
+  /* min-height: 120vh; */
+  min-height: calc(100vh + 128px);
   padding: 24px;
   color: #fff;
   width: 100%;
@@ -20,7 +21,8 @@ export const Container = styled.div<ContainerProps>`
     align-items: center;
     flex-direction: column;
     min-height: 100%;
-    padding-bottom: 98px;
+    /* padding-bottom: 98px; */
+    padding-bottom: 118px;
     z-index: 2;
 
     > section {
@@ -33,13 +35,15 @@ export const Container = styled.div<ContainerProps>`
 
       > h1 {
         font-size: 80px;
-        margin-bottom: 22px;
+        /* margin-bottom: 22px; */
+        margin-bottom: 21px;
       }
 
       > p {
         font-size: 33px;
         text-align: center;
         line-height: 1.5;
+        /* margin-bottom: 3px; */
       }
     }
   }
