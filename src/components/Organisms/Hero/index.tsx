@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback, useState, useRef } from "react";
+import useInView from "../../../hooks/useInView";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import { Container, Finger } from "./styles";
 
@@ -7,31 +8,11 @@ interface Props {
 }
 
 const Hero: React.FC<Props> = (props) => {
-  const ref = useRef(null);
-  const [display, setDisplay] = useState(false);
+  const [ref, isInView] = useInView();
 
   useEffect(() => {
-    if (!ref || !ref?.current || display) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        props.setIsDisplayingHero(entries[0].isIntersecting);
-      },
-      {
-        root: null,
-        threshold: 0,
-        rootMargin: "-10px 0px 0px 0px",
-      }
-    );
-
-    observer.observe(ref.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [display]);
+    props.setIsDisplayingHero(isInView);
+  }, [props, isInView]);
 
   return (
     <Container ref={ref}>
