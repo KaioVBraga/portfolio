@@ -15,7 +15,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #181818;
+    background-color: transparent;
+    /* background-color: #181818; */
     overflow-y: scroll;
     overflow-x: hidden;
     perspective: 1px;

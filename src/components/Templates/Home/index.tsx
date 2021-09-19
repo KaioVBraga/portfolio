@@ -26,8 +26,9 @@ const TemplateHome: React.FC<Props> = (props) => {
 
       <section onScroll={handleScroll}>
         {props?.children?.slice(1, (props?.children?.length || 0) - 1)}
-        {props.children[props.children.length - 1]}
       </section>
+
+      {props.children[props.children.length - 1]}
     </Container>
   );
 };

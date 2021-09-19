@@ -25,7 +25,7 @@ export default memo(createGlobalStyle`
     font-size: 16px !important;
     font-display: swap;
 
-    --color-background: #FFFFFF;
+    --color-background: #191919;
     --color-primary: #FF7417;
     --color-primary-dark: #f26202;
     --color-success: #21ba45;

@@ -14,6 +14,7 @@ import TestimonialsCarousel from "../components/Organisms/TestimonialsCarousel";
 import JournalGrid from "../components/Organisms/JournalGrid";
 import GetInTouch from "../components/Organisms/GetInTouch";
 import Footer from "../components/Organisms/Footer";
+import FakeFooter from "../components/Organisms/FakeFooter";
 import TemplateHome from "../components/Templates/Home";
 import api from "../services/apis";
 
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
       <TestimonialsCarousel />
       <JournalGrid />
       <GetInTouch />
+      <FakeFooter />
       <Footer />
     </TemplateHome>
   );

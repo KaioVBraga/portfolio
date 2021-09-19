@@ -13,9 +13,10 @@ export const Container = styled.div<ContainerProps>`
   color: #fff;
   padding: 0 64px 150px 100px;
 
-  position: relative;
+  position: fixed;
+  /* position: relative; */
   bottom: 0px;
-  z-index: 50;
+  z-index: -1;
 
   /* position: fixed;
   z-index: 50;
