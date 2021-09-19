@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "./styles";
 import Carousel from "nuka-carousel";
+import Cover from "../../Molecules/Cover";
 
 const CompaniesCarousel: React.FC = (props) => {
   const [images, setImage] = useState([
@@ -12,6 +13,7 @@ const CompaniesCarousel: React.FC = (props) => {
 
   return (
     <Container>
+      <Cover />
       <section>
         <Carousel
           slidesToShow={5}

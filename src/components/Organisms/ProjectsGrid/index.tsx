@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import ProjectItem from "../../Molecules/ProjectItem";
-import { Container } from "./styles";
+import Cover from "../../Molecules/Cover";
+import { Container, Line } from "./styles";
 
 const ProjectsGrid: React.FC = (props) => {
   const itemsList = [
@@ -69,6 +70,7 @@ const ProjectsGrid: React.FC = (props) => {
 
   return (
     <Container>
+      <Cover />
       <section>
         <header>
           <h1>Portfolio</h1>

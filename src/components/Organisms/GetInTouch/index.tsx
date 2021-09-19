@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Button from "../../Atoms/Button";
+import Cover from "../../Molecules/Cover";
 import ProjectItem from "../../Molecules/ProjectItem";
 import { Container, FormContainer, InfoContainer } from "./styles";
 
 const GetInTouch: React.FC = () => {
   return (
     <Container>
+      <Cover />
       <section>
         <header>
           <h1>Get In Touch</h1>

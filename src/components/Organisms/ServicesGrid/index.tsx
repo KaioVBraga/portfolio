@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cover from "../../Molecules/Cover";
 import ServiceItem from "../../Molecules/ServiceItem";
 import { Container } from "./styles";
 
@@ -56,6 +57,7 @@ const ServicesGrid: React.FC = (props) => {
 
   return (
     <Container>
+      <Cover />
       <section>
         <header>
           <h1>My Services</h1>

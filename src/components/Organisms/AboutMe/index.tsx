@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Button from "../../Atoms/Button";
 import HeroNavbar from "../../Molecules/HeroNavbar";
-import ProjectItem from "../../Molecules/ProjectItem";
+import Cover from "../../Molecules/Cover";
 import { Container, ImageContainer, TextContainer } from "./styles";
 
 const AboutMe: React.FC = (props) => {
   return (
     <Container>
+      <Cover />
       <section>
         <header>
           <h1>About Me</h1>

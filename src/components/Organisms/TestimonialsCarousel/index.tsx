@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import Testimonial from "../../Molecules/Testimonial";
+import Cover from "../../Molecules/Cover";
 import { Container } from "./styles";
 
 const TestimonialsCarousel: React.FC = (props) => {
   return (
     <Container>
+      <Cover />
       <section>
         <Testimonial
           testimony="

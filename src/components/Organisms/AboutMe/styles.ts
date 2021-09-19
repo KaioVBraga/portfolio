@@ -5,6 +5,7 @@ interface ContainerProps {}
 export const Container = styled.div<ContainerProps>`
   padding: 120px 0px 100px 0px;
 
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;

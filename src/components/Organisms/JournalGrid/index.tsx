@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import JournalItem from "../../Molecules/JournalItem";
+import Cover from "../../Molecules/Cover";
 import { Container } from "./styles";
 
 const JournalGrid: React.FC = (props) => {
   return (
     <Container>
+      <Cover />
       <section>
         <header>
           <h1>My Journal</h1>

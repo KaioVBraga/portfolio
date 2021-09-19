@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import Cover from "../../Molecules/Cover";
 import SkillCounter from "../../Molecules/SkillCounter";
 import { Container } from "./styles";
 
 const SkillsGrid: React.FC = (props) => {
   return (
     <Container>
+      <Cover />
       <section>
         <header>
           <h1>My Skills</h1>
