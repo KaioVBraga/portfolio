@@ -20,7 +20,7 @@ const useInView = (props: Props | null = null) => {
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-      setIsInView(entries[0].isIntersecting);
+      setIsInView(!!entries[0].isIntersecting);
     }, options);
 
     observer.observe(ref.current);

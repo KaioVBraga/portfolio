@@ -34,12 +34,44 @@ export const Container = styled.div<ContainerProps>`
       justify-content: center;
 
       > h1 {
+        position: relative;
         font-size: 80px;
         /* margin-bottom: 22px; */
         margin-bottom: 21px;
+
+        /* ::before {
+          content: "";
+          display: block;
+          height: 110px;
+          width: 0%;
+          position: absolute;
+          top: 0;
+          background-color: #d63447;
+          animation: expand 2s normal;
+
+          @keyframes expand {
+            0% {
+              left: 0;
+              width: 0%;
+            }
+            40% {
+              left: 0;
+              width: 100%;
+            }
+            60% {
+              right: 0;
+              width: 100%;
+            }
+            100% {
+              right: 0;
+              width: 0%;
+            }
+          }
+        } */
       }
 
       > p {
+        position: relative;
         font-size: 33px;
         text-align: center;
         line-height: 1.5;

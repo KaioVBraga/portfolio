@@ -1,7 +1,9 @@
 import React, { useEffect, useCallback, useState, useRef } from "react";
 import useInView from "../../../hooks/useInView";
 import HeroNavbar from "../../Molecules/HeroNavbar";
+import AnimatedCover from "../../Molecules/AnimatedCover";
 import { Container, Finger } from "./styles";
+import useAnimate from "../../../hooks/useAnimate";
 
 interface Props {
   setIsDisplayingHero: (value: any) => void;
@@ -10,6 +12,7 @@ interface Props {
 
 const Hero: React.FC<Props> = (props) => {
   const [ref, isInView] = useInView();
+  const [animate] = useAnimate({ isInView: !!isInView });
 
   useEffect(() => {
     props.setIsDisplayingHero(isInView);
@@ -22,9 +25,13 @@ const Hero: React.FC<Props> = (props) => {
       </header>
       <main>
         <section>
-          <h1>Unfold</h1>
+          <h1>
+            Unfold
+            <AnimatedCover animate={animate} />
+          </h1>
           <p>
             I’m Glenn Chapman Hoyer A Product Designer Based In San Francisco
+            <AnimatedCover animate={animate} />
           </p>
         </section>
         <section>
