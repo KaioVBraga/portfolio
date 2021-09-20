@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "./styles";
 
 interface Props {
-  height?: number;
+  height?: number | string;
   animate?: boolean;
 }
 

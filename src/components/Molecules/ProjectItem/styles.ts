@@ -1,15 +1,31 @@
 import styled from "styled-components";
 
-interface ContainerProps {}
+interface ContainerProps {
+  animate?: boolean;
+}
 
 export const Container = styled.div<ContainerProps>`
   display: block;
   position: relative;
   cursor: pointer;
+  width: 348px;
+  height: min-content;
+  overflow: hidden;
 
   > img {
     width: 100%;
+    /* width: 348px; */
     /* width: 328px; */
+    ${(props) => props.animate && `animation: shrink-image 2s normal;`}
+
+    @keyframes shrink-image {
+      0% {
+        transform: scale(2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 `;
 

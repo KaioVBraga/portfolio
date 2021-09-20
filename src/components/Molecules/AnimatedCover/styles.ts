@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 interface ContainerProps {
-  height?: number;
+  height?: number | string;
   animate?: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
   display: block;
-  height: ${(props) => props?.height || "110"}px;
+  height: ${(props) => props?.height || "110px"};
   width: 0%;
   position: absolute;
   top: 0;
