@@ -6,7 +6,7 @@ import { Container, ImageContainer, TextContainer } from "./styles";
 
 const AboutMe: React.FC = (props) => {
   return (
-    <Container>
+    <Container id="about">
       <Cover />
       <section>
         <header>

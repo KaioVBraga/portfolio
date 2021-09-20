@@ -4,7 +4,7 @@ interface ContainerProps {}
 
 export const Container = styled.div<ContainerProps>`
   position: relative;
-  padding: 120px 0px 100px 0px;
+  /* padding: 120px 0px 100px 0px; */
 
   width: 100%;
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   background-color: #000;
   color: #fff;
-  padding: 0 64px 0 100px;
+  padding: 50px 64px 0 100px;
 
   > section {
     width: 100%;

@@ -8,38 +8,50 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
   const leftItems = [
     {
       text: "Home",
+      destiny: "home-hero",
     },
     {
       text: "Portfolio",
+      destiny: "projects",
     },
     {
       text: "About",
+      destiny: "about",
     },
     {
       text: "Services",
+      destiny: "services",
     },
   ];
 
   const rightItems = [
     {
       text: "Skills",
+      destiny: "skills",
     },
     {
       text: "Testimonial",
+      destiny: "testimonial",
     },
     {
       text: "Journal",
+      destiny: "journal",
     },
     {
       text: "Contact",
+      destiny: "get-in-touch",
     },
   ];
 
   return (
-    <Container>
+    <Container displayNavbar={props.displayNavbar}>
       <ItemsList align="right">
         {leftItems.map((item, index) => (
-          <ListItem key={index} active={index === activeIndex}>
+          <ListItem
+            key={index}
+            active={index === activeIndex}
+            onClick={() => props.scrollTo(item.destiny)}
+          >
             {item.text}
           </ListItem>
         ))}
@@ -51,7 +63,11 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
 
       <ItemsList align="left">
         {rightItems.map((item, index) => (
-          <ListItem key={index} active={index + 4 === activeIndex}>
+          <ListItem
+            key={index}
+            active={index + 4 === activeIndex}
+            onClick={() => props.scrollTo(item.destiny)}
+          >
             {item.text}
           </ListItem>
         ))}

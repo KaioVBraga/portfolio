@@ -12,7 +12,7 @@ const CompaniesCarousel: React.FC = (props) => {
   ]);
 
   return (
-    <Container>
+    <Container id="companies">
       <Cover />
       <section>
         <Carousel

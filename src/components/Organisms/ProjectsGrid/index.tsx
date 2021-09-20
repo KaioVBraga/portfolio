@@ -69,7 +69,7 @@ const ProjectsGrid: React.FC = (props) => {
   ];
 
   return (
-    <Container>
+    <Container id="projects">
       <Cover />
       <section>
         <header>

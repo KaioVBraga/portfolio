@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/dist/client/router";
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { ICardYoutube } from "../@types/Components/Molecules/CardYoutube/types";
 import { YoutubeVideoResponse } from "../@types/Pages/Home/types";
 import Navbar from "../components/Organisms/Navbar";
@@ -21,12 +21,32 @@ import api from "../services/apis";
 const Home: NextPage = () => {
   const [goingUp, setGoingUp] = useState(false);
   const [isDisplayingHero, setIsDisplayingHero] = useState(false);
+  const ref = useRef(null);
+
+  const scrollTo = (destiny) => {
+    if (!ref?.current) {
+      return;
+    }
+
+    const el = document.getElementById(destiny).getBoundingClientRect();
+
+    console.log("REF BOUNDING", ref.current.getBoundingClientRect());
+    console.log("REF SCROLL", ref.current.scrollTop);
+    console.log("EL Y", el.y);
+
+    const positionDestiny = el.y + ref.current.scrollTop;
+
+    ref.current.scroll(0, positionDestiny);
+  };
 
   return (
-    <TemplateHome setGoingUp={setGoingUp}>
-      <Navbar displayNavbar={goingUp && !isDisplayingHero} />
+    <TemplateHome setGoingUp={setGoingUp} ref={ref}>
+      <Navbar
+        displayNavbar={goingUp && !isDisplayingHero}
+        scrollTo={scrollTo}
+      />
 
-      <Hero setIsDisplayingHero={setIsDisplayingHero} />
+      <Hero setIsDisplayingHero={setIsDisplayingHero} scrollTo={scrollTo} />
       <ProjectsGrid />
       <CompaniesCarousel />
       <AboutMe />

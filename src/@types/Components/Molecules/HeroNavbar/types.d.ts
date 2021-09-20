@@ -1,1 +1,3 @@
-interface HeroNavbarProps {}
+interface HeroNavbarProps {
+  scrollTo: (value: any) => any;
+}

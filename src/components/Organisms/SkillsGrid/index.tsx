@@ -5,7 +5,7 @@ import { Container } from "./styles";
 
 const SkillsGrid: React.FC = (props) => {
   return (
-    <Container>
+    <Container id="skills">
       <Cover />
       <section>
         <header>

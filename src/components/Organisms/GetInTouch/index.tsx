@@ -6,7 +6,7 @@ import { Container, FormContainer, InfoContainer } from "./styles";
 
 const GetInTouch: React.FC = () => {
   return (
-    <Container>
+    <Container id="get-in-touch">
       <Cover />
       <section>
         <header>

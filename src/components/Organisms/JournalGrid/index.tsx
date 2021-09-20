@@ -5,7 +5,7 @@ import { Container } from "./styles";
 
 const JournalGrid: React.FC = (props) => {
   return (
-    <Container>
+    <Container id="journal">
       <Cover />
       <section>
         <header>

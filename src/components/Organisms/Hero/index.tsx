@@ -5,6 +5,7 @@ import { Container, Finger } from "./styles";
 
 interface Props {
   setIsDisplayingHero: (value: any) => void;
+  scrollTo: (value: any) => any;
 }
 
 const Hero: React.FC<Props> = (props) => {
@@ -15,9 +16,9 @@ const Hero: React.FC<Props> = (props) => {
   }, [props, isInView]);
 
   return (
-    <Container ref={ref}>
+    <Container ref={ref} id="home-hero">
       <header>
-        <HeroNavbar />
+        <HeroNavbar scrollTo={props.scrollTo} />
       </header>
       <main>
         <section>

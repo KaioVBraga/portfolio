@@ -42,7 +42,8 @@ export const Container = styled.div<ContainerProps>`
         "third forth fifth";
       grid-template-columns: 1fr 1fr 1fr;
       min-height: 100%;
-      padding-bottom: 98px;
+      padding-bottom: 48px;
+      /* padding-bottom: 98px; */
       width: 100%;
 
       > :nth-child(1) {

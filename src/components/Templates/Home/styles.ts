@@ -21,6 +21,7 @@ export const Container = styled.div`
     overflow-x: hidden;
     perspective: 1px;
     transform-style: preserve-3d;
+    scroll-behavior: smooth;
     /* margin: 0 0 400px 0 !important; */
   }
 `;
