@@ -2,6 +2,7 @@ import React, { useEffect, useCallback, useState, useRef } from "react";
 import useInView from "../../../hooks/useInView";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import AnimatedCover from "../../Molecules/AnimatedCover";
+import AnimatedContent from "../../Molecules/AnimatedContent";
 import { Container, Finger } from "./styles";
 import useAnimate from "../../../hooks/useAnimate";
 
@@ -19,18 +20,21 @@ const Hero: React.FC<Props> = (props) => {
   }, [props, isInView]);
 
   return (
-    <Container ref={ref} id="home-hero">
+    <Container ref={ref} id="home-hero" animate={animate}>
       <header>
         <HeroNavbar scrollTo={props.scrollTo} />
       </header>
       <main>
         <section>
           <h1>
-            Unfold
+            <AnimatedContent animate={animate}>Unfold</AnimatedContent>
             <AnimatedCover animate={animate} />
           </h1>
           <p>
-            I’m Glenn Chapman Hoyer A Product Designer Based In San Francisco
+            <AnimatedContent animate={animate}>
+              I’m Glenn Chapman Hoyer A Product
+              <br /> Designer Based In San Francisco
+            </AnimatedContent>
             <AnimatedCover animate={animate} />
           </p>
         </section>

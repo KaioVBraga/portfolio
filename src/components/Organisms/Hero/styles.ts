@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-interface ContainerProps {}
+interface ContainerProps {
+  animate: boolean;
+}
 
 export const Container = styled.div<ContainerProps>`
   position: relative;
@@ -38,6 +40,7 @@ export const Container = styled.div<ContainerProps>`
         font-size: 80px;
         /* margin-bottom: 22px; */
         margin-bottom: 21px;
+        width: min-content;
 
         /* ::before {
           content: "";

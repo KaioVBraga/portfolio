@@ -14,16 +14,24 @@ export const Container = styled.div<ContainerProps>`
 
   > img {
     width: 100%;
+    height: 100%;
+    min-height: 240px;
     /* width: 348px; */
     /* width: 328px; */
-    ${(props) => props.animate && `animation: shrink-image 2s normal;`}
+    ${(props) => props.animate && `animation: shrink-image 4s normal;`}
 
     @keyframes shrink-image {
       0% {
-        transform: scale(2);
+        transform: scale(1.1);
+        width: 0%;
+      }
+      50% {
+        transform: scale(1.1);
+        width: 100%;
       }
       100% {
         transform: scale(1);
+        width: 100%;
       }
     }
   }

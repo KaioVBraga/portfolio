@@ -4,6 +4,7 @@ import { FaCopy } from "react-icons/fa";
 import AnimatedCover from "../AnimatedCover";
 import useInView from "../../../hooks/useInView";
 import useAnimate from "../../../hooks/useAnimate";
+import AnimatedContent from "../AnimatedContent";
 
 interface ProjectItemProps {
   name?: string;
@@ -29,6 +30,7 @@ const ProjectItem: React.FC<ProjectItemProps> = (props) => {
         </main>
       </Cover>
       <AnimatedCover height={"100%"} animate={animate} />
+
       <img src={props.image} alt="Project Item" />
     </Container>
   );
