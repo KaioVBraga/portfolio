@@ -3,7 +3,10 @@ import HeroNavbar from "../../Molecules/HeroNavbar";
 import Testimonial from "../../Molecules/Testimonial";
 import Cover from "../../Molecules/Cover";
 import { Container } from "./styles";
-import Carousel from "nuka-carousel";
+// import Carousel from "nuka-carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
 
 const TestimonialsCarousel: React.FC = (props) => {
   const [testimonials, setTestimonials] = useState([
@@ -42,7 +45,7 @@ const TestimonialsCarousel: React.FC = (props) => {
           <img src="/underline.png" />
         </header>
         <main>
-          <Carousel
+          {/* <Carousel
             slidesToShow={1}
             slideIndex={0}
             renderCenterLeftControls={null}
@@ -59,7 +62,20 @@ const TestimonialsCarousel: React.FC = (props) => {
                 role={testimonial.role}
               />
             ))}
-          </Carousel>
+          </Carousel> */}
+          <Swiper slidesPerView={1}>
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide>
+                <Testimonial
+                  key={index}
+                  testimony={testimonial.testimony}
+                  image={testimonial.image}
+                  name={testimonial.name}
+                  role={testimonial.role}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </main>
       </section>
     </Container>

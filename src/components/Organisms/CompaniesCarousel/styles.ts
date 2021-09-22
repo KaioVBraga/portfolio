@@ -17,8 +17,9 @@ export const Container = styled.div<ContainerProps>`
     align-items: center;
     max-width: 1140px;
 
-    > img {
+    img {
       width: 100%;
+      height: 100px !important;
     }
   }
 `;

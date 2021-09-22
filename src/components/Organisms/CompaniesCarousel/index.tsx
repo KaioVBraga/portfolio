@@ -3,6 +3,10 @@ import { Container } from "./styles";
 import Carousel from "nuka-carousel";
 import Cover from "../../Molecules/Cover";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+
 const CompaniesCarousel: React.FC = (props) => {
   const [images, setImage] = useState([
     "/adobe.png",
@@ -15,7 +19,7 @@ const CompaniesCarousel: React.FC = (props) => {
     <Container id="companies">
       <Cover />
       <section>
-        <Carousel
+        {/* <Carousel
           slidesToShow={5}
           slideIndex={0}
           renderCenterLeftControls={null}
@@ -26,7 +30,15 @@ const CompaniesCarousel: React.FC = (props) => {
           {[...images, ...images].map((image) => (
             <img src={image} />
           ))}
-        </Carousel>
+        </Carousel> */}
+
+        <Swiper slidesPerView={5}>
+          {[...images, ...images].map((image) => (
+            <SwiperSlide>
+              <img src={image} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
     </Container>
   );
