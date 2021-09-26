@@ -42,3 +42,35 @@ export const Container = styled.div<ContainerProps>`
     }
   }
 `;
+
+export const AngleLeftContainer = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 26px;
+  cursor: pointer;
+  height: min-content;
+  width: min-content;
+  max-width: 16px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+`;
+
+export const AngleRightContainer = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 26px;
+  cursor: pointer;
+  height: min-content;
+  width: min-content;
+  z-index: 100;
+  max-width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+`;

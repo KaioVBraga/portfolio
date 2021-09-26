@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import Testimonial from "../../Molecules/Testimonial";
 import Cover from "../../Molecules/Cover";
-import { Container } from "./styles";
+import { Container, AngleLeftContainer, AngleRightContainer } from "./styles";
 // import Carousel from "nuka-carousel";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const TestimonialsCarousel: React.FC = (props) => {
   const [testimonials, setTestimonials] = useState([
@@ -36,6 +40,9 @@ const TestimonialsCarousel: React.FC = (props) => {
     },
   ]);
 
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
   return (
     <Container id="testimonial">
       <Cover />
@@ -45,25 +52,24 @@ const TestimonialsCarousel: React.FC = (props) => {
           <img src="/underline.png" />
         </header>
         <main>
-          {/* <Carousel
-            slidesToShow={1}
-            slideIndex={0}
-            renderCenterLeftControls={null}
-            renderCenterRightControls={null}
-            wrapAround={true}
-            // easing="easeCubic(0.25)"
+          <Swiper
+            slidesPerView={1}
+            loop={true}
+            modules={[Navigation, Pagination]}
+            // navigation
+            navigation={{
+              prevEl: navigationPrevRef.current,
+              nextEl: navigationNextRef.current,
+            }}
+            pagination={{
+              // el: ".swiper-pagination",
+              clickable: true,
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = navigationPrevRef.current;
+              swiper.params.navigation.nextEl = navigationNextRef.current;
+            }}
           >
-            {testimonials.map((testimonial, index) => (
-              <Testimonial
-                key={index}
-                testimony={testimonial.testimony}
-                image={testimonial.image}
-                name={testimonial.name}
-                role={testimonial.role}
-              />
-            ))}
-          </Carousel> */}
-          <Swiper slidesPerView={1}>
             {testimonials.map((testimonial, index) => (
               <SwiperSlide>
                 <Testimonial
@@ -75,6 +81,12 @@ const TestimonialsCarousel: React.FC = (props) => {
                 />
               </SwiperSlide>
             ))}
+            <AngleLeftContainer ref={navigationPrevRef}>
+              <FaAngleLeft />
+            </AngleLeftContainer>
+            <AngleRightContainer ref={navigationNextRef}>
+              <FaAngleRight />
+            </AngleRightContainer>
           </Swiper>
         </main>
       </section>
