@@ -12,6 +12,7 @@ export const Container = styled.div<ContainerProps>`
   justify-content: space-between;
   /* min-height: 120vh; */
   min-height: calc(100vh + 128px);
+  /* min-height: calc(100vh + 128px); */
   padding: 24px;
   color: #fff;
   width: 100%;
@@ -113,6 +114,14 @@ export const Container = styled.div<ContainerProps>`
     image-rendering: -o-crisp-edges; /* Opera */
     image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
     -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  }
+
+  @media screen and (min-height: 600px) {
+    min-height: calc(100vh + 64px);
+  }
+
+  @media screen and (min-height: 650px) {
+    min-height: calc(100vh + 32px);
   }
 `;
 
