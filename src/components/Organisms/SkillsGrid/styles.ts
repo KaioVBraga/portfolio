@@ -23,6 +23,7 @@ export const Container = styled.div<ContainerProps>`
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
 
       > h1 {
         font-size: 32px;

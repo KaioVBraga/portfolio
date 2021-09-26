@@ -2,15 +2,27 @@ import React, { useState } from "react";
 import JournalItem from "../../Molecules/JournalItem";
 import Cover from "../../Molecules/Cover";
 import { Container } from "./styles";
+import AnimatedCover from "../../Molecules/AnimatedCover";
+import useAnimate from "../../../hooks/useAnimate";
+import useInView from "../../../hooks/useInView";
 
 const JournalGrid: React.FC = (props) => {
+  const [ref, isInView] = useInView();
+  const [animate] = useAnimate({ isInView: !!isInView });
+
   return (
-    <Container id="journal">
+    <Container id="journal" ref={ref}>
       <Cover />
       <section>
         <header>
           <h1>My Journal</h1>
           <img src="/underline.png" />
+
+          <AnimatedCover
+            animate={animate}
+            backgroundColor={"#000"}
+            startVisible={true}
+          />
         </header>
         <main>
           <JournalItem

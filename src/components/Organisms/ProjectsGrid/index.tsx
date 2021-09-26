@@ -80,13 +80,13 @@ const ProjectsGrid: React.FC = (props) => {
       <Cover />
       <section>
         <header>
-          <h1>
-            {/* Portfolio */}
-            <AnimatedContent animate={animate} seconds={1}>
-              Portfolio
-            </AnimatedContent>
-            <AnimatedCover animate={animate} backgroundColor={"#000"} />
-          </h1>
+          <h1>Portfolio</h1>
+          <AnimatedCover
+            animate={animate}
+            backgroundColor={"#000"}
+            startVisible={true}
+            seconds={4}
+          />
         </header>
         <main>
           {itemsList.map((items, itemsIndex) => (

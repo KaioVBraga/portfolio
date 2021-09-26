@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import useAnimate from "../../../hooks/useAnimate";
+import useInView from "../../../hooks/useInView";
+import AnimatedCover from "../../Molecules/AnimatedCover";
 import Cover from "../../Molecules/Cover";
 import ServiceItem from "../../Molecules/ServiceItem";
 import { Container } from "./styles";
 
 const ServicesGrid: React.FC = (props) => {
+  const [ref, isInView] = useInView();
+  const [animate] = useAnimate({ isInView: !!isInView });
+
   const itemsList = [
     [
       {
@@ -56,12 +62,17 @@ const ServicesGrid: React.FC = (props) => {
   ];
 
   return (
-    <Container id="services">
+    <Container id="services" ref={ref}>
       <Cover />
       <section>
         <header>
           <h1>My Services</h1>
           <img src="/underline.png" />
+          <AnimatedCover
+            animate={animate}
+            backgroundColor={"#000"}
+            startVisible={true}
+          />
         </header>
         <main>
           {itemsList.map((items, itemsIndex) => (

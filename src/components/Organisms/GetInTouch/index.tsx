@@ -1,17 +1,28 @@
 import React, { useState } from "react";
+import useAnimate from "../../../hooks/useAnimate";
+import useInView from "../../../hooks/useInView";
 import Button from "../../Atoms/Button";
+import AnimatedCover from "../../Molecules/AnimatedCover";
 import Cover from "../../Molecules/Cover";
 import ProjectItem from "../../Molecules/ProjectItem";
 import { Container, FormContainer, InfoContainer } from "./styles";
 
 const GetInTouch: React.FC = () => {
+  const [ref, isInView] = useInView();
+  const [animate] = useAnimate({ isInView: !!isInView });
+
   return (
-    <Container id="get-in-touch">
+    <Container id="get-in-touch" ref={ref}>
       <Cover />
       <section>
         <header>
           <h1>Get In Touch</h1>
           <img src="/underline.png" />
+          <AnimatedCover
+            animate={animate}
+            backgroundColor={"#000"}
+            startVisible={true}
+          />
         </header>
         <main>
           <FormContainer>

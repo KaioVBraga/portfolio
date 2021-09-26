@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+import useAnimate from "../../../hooks/useAnimate";
 import useInView from "../../../hooks/useInView";
+import AnimatedCover from "../../Molecules/AnimatedCover";
 import Cover from "../../Molecules/Cover";
 import SkillCounter from "../../Molecules/SkillCounter";
 import { Container } from "./styles";
 
 const SkillsGrid: React.FC = (props) => {
   const [ref, isInView] = useInView();
+  const [animate] = useAnimate({ isInView: !!isInView });
 
   const [show, setShow] = useState(false);
 
@@ -24,6 +27,11 @@ const SkillsGrid: React.FC = (props) => {
         <header>
           <h1>My Skills</h1>
           <img src="/underline.png" />
+          <AnimatedCover
+            animate={animate}
+            backgroundColor={"#000"}
+            startVisible={true}
+          />
         </header>
         <main>
           {show && (

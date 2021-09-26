@@ -3,15 +3,27 @@ import Button from "../../Atoms/Button";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import Cover from "../../Molecules/Cover";
 import { Container, ImageContainer, TextContainer } from "./styles";
+import useInView from "../../../hooks/useInView";
+import useAnimate from "../../../hooks/useAnimate";
+import AnimatedContent from "../../Molecules/AnimatedContent";
+import AnimatedCover from "../../Molecules/AnimatedCover";
 
 const AboutMe: React.FC = (props) => {
+  const [ref, isInView] = useInView();
+  const [animate] = useAnimate({ isInView: !!isInView });
+
   return (
-    <Container id="about">
+    <Container id="about" ref={ref}>
       <Cover />
       <section>
         <header>
           <h1>About Me</h1>
           <img src="/underline.png" />
+          <AnimatedCover
+            animate={animate}
+            backgroundColor={"#000"}
+            startVisible={true}
+          />
         </header>
         <main>
           <ImageContainer>

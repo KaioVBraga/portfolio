@@ -21,6 +21,7 @@ export const Container = styled.div<ContainerProps>`
     max-width: 1140px;
 
     > header {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;

@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Container } from "./styles";
 
 interface Props {
+  width?: number | string;
   height?: number | string;
   animate?: boolean;
   seconds?: number;
   startInvisible?: boolean;
+  display?: string;
 }
 
 const AnimatedContent: React.FC<Props> = (props) => {
@@ -21,10 +23,12 @@ const AnimatedContent: React.FC<Props> = (props) => {
 
   return (
     <Container
+      width={props?.width}
       height={props.height}
       animate={props.animate}
       seconds={props.seconds}
       show={show}
+      display={props.display}
     >
       {props.children}
     </Container>

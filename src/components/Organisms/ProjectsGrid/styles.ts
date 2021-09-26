@@ -25,11 +25,11 @@ export const Container = styled.div<ContainerProps>`
     > header {
       width: 100%;
       margin-bottom: 40px;
+      position: relative;
 
       > h1 {
         /* width: 100%;
         text-align: left; */
-        position: relative;
         width: min-content;
         font-size: 36px;
       }
