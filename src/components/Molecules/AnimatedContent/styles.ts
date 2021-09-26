@@ -3,6 +3,7 @@ import styled from "styled-components";
 interface ContainerProps {
   height?: number | string;
   animate?: boolean;
+  seconds?: number;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -10,7 +11,8 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
   height: min-content;
   max-height: min-content;
-  ${(props) => props?.animate && `animation: expand-h1 2s normal;`}
+  ${(props) =>
+    props?.animate && `animation: expand-h1 ${props.seconds || 2}s normal;`}
   overflow: hidden;
   white-space: nowrap;
   position: relative;

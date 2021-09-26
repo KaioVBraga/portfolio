@@ -27,11 +27,13 @@ const Hero: React.FC<Props> = (props) => {
       <main>
         <section>
           <h1>
-            <AnimatedContent animate={animate}>Unfold</AnimatedContent>
+            <AnimatedContent animate={animate} seconds={1}>
+              Unfold
+            </AnimatedContent>
             <AnimatedCover animate={animate} />
           </h1>
           <p>
-            <AnimatedContent animate={animate}>
+            <AnimatedContent animate={animate} seconds={1}>
               I’m Glenn Chapman Hoyer A Product
               <br /> Designer Based In San Francisco
             </AnimatedContent>
