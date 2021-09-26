@@ -20,7 +20,7 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
     min-height: 100vh;
     align-items: center;
-    padding: 32px 16px 32px 16px;
+    padding: 60px 16px 32px 16px;
 
     > header {
       width: 100%;

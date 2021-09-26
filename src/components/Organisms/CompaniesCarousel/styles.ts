@@ -11,6 +11,8 @@ export const Container = styled.div<ContainerProps>`
   background-color: #000;
   color: #fff;
 
+  padding: 0px 0px 60px 0px;
+
   > section {
     width: 100%;
     display: flex;

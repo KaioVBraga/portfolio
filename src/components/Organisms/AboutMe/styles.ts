@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface ContainerProps {}
 
 export const Container = styled.div<ContainerProps>`
-  padding: 120px 0px 100px 0px;
+  padding: 60px 0px 100px 0px;
 
   position: relative;
   width: 100%;
