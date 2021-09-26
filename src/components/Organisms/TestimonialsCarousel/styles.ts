@@ -32,7 +32,8 @@ export const Container = styled.div<ContainerProps>`
     }
 
     > main {
-      width: 100%;
+      width: 3350px;
+      /* width: 100%; */
       display: flex;
       align-items: center;
 
@@ -41,11 +42,19 @@ export const Container = styled.div<ContainerProps>`
       }
     }
   }
+
+  .swiper-pagination-bullet {
+    background-color: #686868 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #fff !important;
+  }
 `;
 
 export const AngleLeftContainer = styled.div`
   position: absolute;
-  left: 0;
+  left: 1105px;
   bottom: 0;
   font-size: 26px;
   cursor: pointer;
@@ -61,7 +70,7 @@ export const AngleLeftContainer = styled.div`
 
 export const AngleRightContainer = styled.div`
   position: absolute;
-  right: 0;
+  right: 1105px;
   bottom: 0;
   font-size: 26px;
   cursor: pointer;

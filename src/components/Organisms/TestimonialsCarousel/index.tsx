@@ -4,13 +4,14 @@ import Testimonial from "../../Molecules/Testimonial";
 import Cover from "../../Molecules/Cover";
 import { Container, AngleLeftContainer, AngleRightContainer } from "./styles";
 // import Carousel from "nuka-carousel";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 const TestimonialsCarousel: React.FC = (props) => {
   const [testimonials, setTestimonials] = useState([
@@ -43,6 +44,8 @@ const TestimonialsCarousel: React.FC = (props) => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
+  const paginationRef = useRef(null);
+
   return (
     <Container id="testimonial">
       <Cover />
@@ -53,9 +56,11 @@ const TestimonialsCarousel: React.FC = (props) => {
         </header>
         <main>
           <Swiper
-            slidesPerView={1}
+            slidesPerView={3}
+            // slidesPerView={1}
+            autoplay={true}
             loop={true}
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             // navigation
             navigation={{
               prevEl: navigationPrevRef.current,
