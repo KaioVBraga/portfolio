@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../Atoms/Button";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import Cover from "../../Molecules/Cover";
@@ -11,6 +11,15 @@ import AnimatedCover from "../../Molecules/AnimatedCover";
 const AboutMe: React.FC = (props) => {
   const [ref, isInView] = useInView();
   const [animate] = useAnimate({ isInView: !!isInView });
+  const [showImage, setShowImage] = useState(false);
+
+  useEffect(() => {
+    if (showImage && !animate) {
+      return;
+    }
+
+    setTimeout(() => setShowImage(true), 1500);
+  }, [animate, showImage]);
 
   return (
     <Container id="about" ref={ref}>
@@ -26,8 +35,13 @@ const AboutMe: React.FC = (props) => {
           />
         </header>
         <main>
-          <ImageContainer>
+          <ImageContainer animate={animate} show={showImage}>
             <img src="https://preview.colorlib.com/theme/unfold/images/xabout_me_pic2.jpg.pagespeed.ic.MWRYgrv9or.webp" />
+            <AnimatedCover
+              animate={animate}
+              height={"100%"}
+              backgroundColor={"#d63447"}
+            />
           </ImageContainer>
           <TextContainer>
             <h3>We can make it together</h3>

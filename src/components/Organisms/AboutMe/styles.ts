@@ -41,7 +41,12 @@ export const Container = styled.div<ContainerProps>`
   }
 `;
 
-export const ImageContainer = styled.div<ContainerProps>`
+interface ImageContainerProps {
+  animate: boolean;
+  show?: boolean;
+}
+
+export const ImageContainer = styled.div<ImageContainerProps>`
   position: relative;
   /* padding: 0px 100px 0px 40px; */
   padding: 0px 98px 0px 16px;
@@ -49,9 +54,27 @@ export const ImageContainer = styled.div<ContainerProps>`
   > img {
     position: relative;
     width: 100%;
+    opacity: ${(props) => (props.show ? "1" : "0")};
     z-index: 1;
     top: 3px;
     left: 2px;
+    ${(props) => props.animate && `animation: shrink-image 4s normal;`}
+  }
+
+  @keyframes shrink-image {
+    0% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      width: 100%;
+    }
   }
 
   :before {
