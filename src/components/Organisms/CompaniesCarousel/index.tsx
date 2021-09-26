@@ -10,6 +10,8 @@ import "swiper/css/navigation";
 import useInView from "../../../hooks/useInView";
 import { Navigation } from "swiper";
 import useAnimate from "../../../hooks/useAnimate";
+import AnimatedCover from "../../Molecules/AnimatedCover";
+import CompanyItem from "../../Molecules/CompanyItem";
 
 const CompaniesCarousel: React.FC = (props) => {
   const [images, setImage] = useState([
@@ -34,7 +36,7 @@ const CompaniesCarousel: React.FC = (props) => {
       return;
     }
 
-    nextPage();
+    setTimeout(() => nextPage(), 1200);
   }, [animate]);
 
   return (
@@ -55,7 +57,7 @@ const CompaniesCarousel: React.FC = (props) => {
         >
           {[...images, ...images].map((image) => (
             <SwiperSlide>
-              <img src={image} />
+              <CompanyItem image={image} animate={animate} />
             </SwiperSlide>
           ))}
           <div ref={navigationNextRef}></div>
