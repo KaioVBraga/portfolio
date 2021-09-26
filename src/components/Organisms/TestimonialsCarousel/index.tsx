@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import useInView from "../../../hooks/useInView";
+import useAnimate from "../../../hooks/useAnimate";
 
 const TestimonialsCarousel: React.FC = (props) => {
   const [testimonials, setTestimonials] = useState([
@@ -49,18 +50,19 @@ const TestimonialsCarousel: React.FC = (props) => {
 
   const [ref, isInView] = useInView();
 
+  const [animate] = useAnimate({ isInView: !!isInView });
+
   const nextPage = () => {
     navigationNextRef.current.click();
   };
 
   useEffect(() => {
-    if (animated || !isInView) {
+    if (!animate) {
       return;
     }
 
-    setAnimated(true);
     nextPage();
-  }, [isInView, animated, nextPage]);
+  }, [animate]);
 
   return (
     <Container id="testimonial" ref={ref}>

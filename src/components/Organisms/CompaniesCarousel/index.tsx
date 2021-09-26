@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import useInView from "../../../hooks/useInView";
 import { Navigation } from "swiper";
+import useAnimate from "../../../hooks/useAnimate";
 
 const CompaniesCarousel: React.FC = (props) => {
   const [images, setImage] = useState([
@@ -19,22 +20,22 @@ const CompaniesCarousel: React.FC = (props) => {
   ]);
 
   const navigationNextRef = useRef(null);
-  const [animated, setAnimated] = useState(false);
 
   const [ref, isInView] = useInView();
+
+  const [animate] = useAnimate({ isInView: !!isInView });
 
   const nextPage = () => {
     navigationNextRef.current.click();
   };
 
   useEffect(() => {
-    if (animated || !isInView) {
+    if (!animate) {
       return;
     }
 
-    setAnimated(true);
     nextPage();
-  }, [isInView, animated, nextPage]);
+  }, [animate]);
 
   return (
     <Container id="companies" ref={ref}>
