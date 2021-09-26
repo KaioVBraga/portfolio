@@ -19,8 +19,8 @@ const CompaniesCarousel: React.FC = (props) => {
     <Container id="companies">
       <Cover />
       <section>
-        <Swiper slidesPerView={5} loop={true}>
-          {images.map((image) => (
+        <Swiper slidesPerView={5} loop={true} speed={1500}>
+          {[...images, ...images].map((image) => (
             <SwiperSlide>
               <img src={image} />
             </SwiperSlide>
