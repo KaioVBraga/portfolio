@@ -44,19 +44,49 @@ const AboutMe: React.FC = (props) => {
             />
           </ImageContainer>
           <TextContainer>
-            <h3>We can make it together</h3>
+            <h3>
+              We can make it together
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
+            </h3>
             <p>
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there <a href="#">live the blind</a>{" "}
               texts.
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
             </p>
             <p>
               A small river named Duden flows by their place and supplies it
               with the necessary regelialia. It is a paradisematic country, in
               which roasted parts of sentences fly into your mouth.
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
             </p>
             <p>
               <Button>DOWNLOAD MY CV</Button>
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
             </p>
           </TextContainer>
         </main>

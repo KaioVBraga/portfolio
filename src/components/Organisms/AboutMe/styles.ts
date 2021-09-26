@@ -101,9 +101,11 @@ export const TextContainer = styled.div<ContainerProps>`
 
   > h3 {
     font-size: 26px;
+    position: relative;
   }
 
   > p {
+    position: relative;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.8;
