@@ -74,6 +74,7 @@ const TestimonialsCarousel: React.FC = (props) => {
               swiper.params.navigation.prevEl = navigationPrevRef.current;
               swiper.params.navigation.nextEl = navigationNextRef.current;
             }}
+            speed={2000}
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide>
