@@ -4,6 +4,7 @@ interface ContainerProps {
   height?: number | string;
   animate?: boolean;
   seconds?: number;
+  show?: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -16,6 +17,7 @@ export const Container = styled.div<ContainerProps>`
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  opacity: ${(props) => (props.show === false ? "0" : "1")};
 
   > img {
     object-fit: contain;

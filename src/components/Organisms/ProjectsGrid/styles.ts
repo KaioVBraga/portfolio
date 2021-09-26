@@ -27,8 +27,10 @@ export const Container = styled.div<ContainerProps>`
       margin-bottom: 40px;
 
       > h1 {
-        width: 100%;
-        text-align: left;
+        /* width: 100%;
+        text-align: left; */
+        position: relative;
+        width: min-content;
         font-size: 36px;
       }
     }

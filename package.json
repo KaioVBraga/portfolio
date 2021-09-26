@@ -16,6 +16,7 @@
   "dependencies": {
     "@types/styled-components": "^5.1.12",
     "@u-wave/react-youtube": "^0.7.2",
+    "animated-number-react": "^0.1.2",
     "axios": "^0.21.1",
     "husky": "^7.0.1",
     "next": "11.1.0",

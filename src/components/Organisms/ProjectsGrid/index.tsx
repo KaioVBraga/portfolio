@@ -3,6 +3,10 @@ import HeroNavbar from "../../Molecules/HeroNavbar";
 import ProjectItem from "../../Molecules/ProjectItem";
 import Cover from "../../Molecules/Cover";
 import { Container, Line } from "./styles";
+import useInView from "../../../hooks/useInView";
+import useAnimate from "../../../hooks/useAnimate";
+import AnimatedContent from "../../Molecules/AnimatedContent";
+import AnimatedCover from "../../Molecules/AnimatedCover";
 
 const ProjectsGrid: React.FC = (props) => {
   const itemsList = [
@@ -68,12 +72,21 @@ const ProjectsGrid: React.FC = (props) => {
     ],
   ];
 
+  const [ref, isInView] = useInView();
+  const [animate] = useAnimate({ isInView: !!isInView });
+
   return (
-    <Container id="projects">
+    <Container id="projects" ref={ref}>
       <Cover />
       <section>
         <header>
-          <h1>Portfolio</h1>
+          <h1>
+            {/* Portfolio */}
+            <AnimatedContent animate={animate} seconds={1}>
+              Portfolio
+            </AnimatedContent>
+            <AnimatedCover animate={animate} backgroundColor={"#000"} />
+          </h1>
         </header>
         <main>
           {itemsList.map((items, itemsIndex) => (
@@ -84,6 +97,7 @@ const ProjectsGrid: React.FC = (props) => {
                     image={item.image}
                     name={item.name}
                     description={item.description}
+                    animate={itemIndex === 0 ? animate : null}
                   />
                 </li>
               ))}

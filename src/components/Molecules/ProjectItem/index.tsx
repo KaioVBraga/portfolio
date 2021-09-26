@@ -10,6 +10,7 @@ interface ProjectItemProps {
   name?: string;
   description?: string;
   image: string;
+  animate?: any;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = (props) => {
@@ -26,7 +27,11 @@ const ProjectItem: React.FC<ProjectItemProps> = (props) => {
   }, [animate]);
 
   return (
-    <Container ref={ref} animate={animate} show={show}>
+    <Container
+      ref={ref}
+      animate={props.animate !== null ? props.animate : animate}
+      show={show}
+    >
       <Cover>
         <header>
           <span>
@@ -38,7 +43,10 @@ const ProjectItem: React.FC<ProjectItemProps> = (props) => {
           <span>{props.description || ""}</span>
         </main>
       </Cover>
-      <AnimatedCover height={"100%"} animate={animate} />
+      <AnimatedCover
+        height={"100%"}
+        animate={props.animate !== null ? props.animate : animate}
+      />
 
       <img src={props.image} alt="Project Item" />
     </Container>

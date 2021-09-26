@@ -3,6 +3,7 @@ import styled from "styled-components";
 interface ContainerProps {
   height?: number | string;
   animate?: boolean;
+  backgroundColor?: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -11,7 +12,7 @@ export const Container = styled.div<ContainerProps>`
   width: 0%;
   position: absolute;
   top: 0;
-  background-color: #d63447;
+  background-color: ${(props) => props.backgroundColor || "#d63447"};
 
   ${(props) => props?.animate && `animation: expand 2s normal;`}
 
