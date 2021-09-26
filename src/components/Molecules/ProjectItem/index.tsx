@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Cover } from "./styles";
 import { FaCopy } from "react-icons/fa";
 import AnimatedCover from "../AnimatedCover";
@@ -15,9 +15,18 @@ interface ProjectItemProps {
 const ProjectItem: React.FC<ProjectItemProps> = (props) => {
   const [ref, isInView] = useInView();
   const [animate] = useAnimate({ isInView: !!isInView });
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (!animate || show) {
+      return;
+    }
+
+    setShow(true);
+  }, [animate]);
 
   return (
-    <Container ref={ref} animate={animate}>
+    <Container ref={ref} animate={animate} show={show}>
       <Cover>
         <header>
           <span>
