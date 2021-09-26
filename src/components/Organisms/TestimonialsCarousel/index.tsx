@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import Testimonial from "../../Molecules/Testimonial";
 import Cover from "../../Molecules/Cover";
@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import useInView from "../../../hooks/useInView";
 
 const TestimonialsCarousel: React.FC = (props) => {
   const [testimonials, setTestimonials] = useState([
@@ -41,13 +42,28 @@ const TestimonialsCarousel: React.FC = (props) => {
     },
   ]);
 
+  const [animated, setAnimated] = useState(false);
+
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
-  const paginationRef = useRef(null);
+  const [ref, isInView] = useInView();
+
+  const nextPage = () => {
+    navigationNextRef.current.click();
+  };
+
+  useEffect(() => {
+    if (animated || !isInView) {
+      return;
+    }
+
+    setAnimated(true);
+    nextPage();
+  }, [isInView, animated, nextPage]);
 
   return (
-    <Container id="testimonial">
+    <Container id="testimonial" ref={ref}>
       <Cover />
       <section>
         <header>
