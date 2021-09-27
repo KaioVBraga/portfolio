@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-interface ContainerProps {}
+interface ContainerProps {
+  animate?: boolean;
+}
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
@@ -8,6 +10,19 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   width: 100%;
   padding-bottom: 80px;
+  opacity: ${(props) => (props.show ? "1" : "0")};
+  ${(props) => props.animate && `animation: up-item 1s normal;`}
+
+  @keyframes up-item {
+    0% {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 
   > div {
     display: flex;

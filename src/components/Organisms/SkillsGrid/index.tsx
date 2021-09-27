@@ -8,6 +8,13 @@ import { Container } from "./styles";
 
 const SkillsGrid: React.FC = (props) => {
   const [ref, isInView] = useInView();
+
+  const [animateItems, setAnimateItems] = useState([
+    false,
+    false,
+    false,
+    false,
+  ]);
   const [animate] = useAnimate({ isInView: !!isInView });
 
   const [show, setShow] = useState(false);
@@ -19,6 +26,52 @@ const SkillsGrid: React.FC = (props) => {
 
     setShow(true);
   }, [isInView, show]);
+
+  useEffect(() => {
+    if (!animate) {
+      return;
+    }
+
+    if (!animateItems[0]) {
+      setTimeout(() => {
+        setAnimateItems((animateItems) => {
+          const newAnimateItems = [...animateItems];
+          newAnimateItems[0] = true;
+          return newAnimateItems;
+        });
+      }, 200);
+    }
+
+    if (!animateItems[1]) {
+      setTimeout(() => {
+        setAnimateItems((animateItems) => {
+          const newAnimateItems = [...animateItems];
+          newAnimateItems[1] = true;
+          return newAnimateItems;
+        });
+      }, 350);
+    }
+
+    if (!animateItems[2]) {
+      setTimeout(() => {
+        setAnimateItems((animateItems) => {
+          const newAnimateItems = [...animateItems];
+          newAnimateItems[2] = true;
+          return newAnimateItems;
+        });
+      }, 500);
+    }
+
+    if (!animateItems[3]) {
+      setTimeout(() => {
+        setAnimateItems((animateItems) => {
+          const newAnimateItems = [...animateItems];
+          newAnimateItems[3] = true;
+          return newAnimateItems;
+        });
+      }, 650);
+    }
+  }, [animate, animateItems]);
 
   return (
     <Container id="skills" ref={ref}>
@@ -36,10 +89,26 @@ const SkillsGrid: React.FC = (props) => {
         <main>
           {show && (
             <>
-              <SkillCounter value={90} name="WORDPRESS" />
-              <SkillCounter value={99} name="HTML/CSS" />
-              <SkillCounter value={95} name="JQUERY" />
-              <SkillCounter value={100} name="DESIGN" />
+              <SkillCounter
+                value={90}
+                name="WORDPRESS"
+                animate={animateItems[0]}
+              />
+              <SkillCounter
+                value={99}
+                name="HTML/CSS"
+                animate={animateItems[1]}
+              />
+              <SkillCounter
+                value={95}
+                name="JQUERY"
+                animate={animateItems[2]}
+              />
+              <SkillCounter
+                value={100}
+                name="DESIGN"
+                animate={animateItems[3]}
+              />
             </>
           )}
         </main>
