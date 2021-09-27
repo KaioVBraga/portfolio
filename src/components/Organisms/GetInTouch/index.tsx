@@ -5,7 +5,13 @@ import Button from "../../Atoms/Button";
 import AnimatedCover from "../../Molecules/AnimatedCover";
 import Cover from "../../Molecules/Cover";
 import ProjectItem from "../../Molecules/ProjectItem";
-import { Container, FormContainer, InfoContainer } from "./styles";
+import {
+  Container,
+  FormContainer,
+  InfoContainer,
+  InputContainer,
+  TextAreaContainer,
+} from "./styles";
 
 const GetInTouch: React.FC = () => {
   const [ref, isInView] = useInView();
@@ -27,24 +33,73 @@ const GetInTouch: React.FC = () => {
         <main>
           <FormContainer>
             <fieldset>
-              <input placeholder="NAME" />
-              <input placeholder="EMAIL" />
+              <InputContainer>
+                <input placeholder="NAME" />
+                <AnimatedCover
+                  animate={animate}
+                  height={"100%"}
+                  backgroundColor="#000"
+                  seconds={2}
+                  startVisible={true}
+                />
+              </InputContainer>
+
+              <InputContainer>
+                <input placeholder="EMAIL" />
+                <AnimatedCover
+                  animate={animate}
+                  height={"100%"}
+                  backgroundColor="#000"
+                  seconds={2}
+                  startVisible={true}
+                />
+              </InputContainer>
             </fieldset>
             <fieldset>
-              <textarea placeholder="WRITE YOUR MESSAGE..." />
+              <TextAreaContainer>
+                <textarea placeholder="WRITE YOUR MESSAGE..." />
+                <AnimatedCover
+                  animate={animate}
+                  height={"100%"}
+                  backgroundColor="#000"
+                  seconds={2}
+                  startVisible={true}
+                />
+              </TextAreaContainer>
             </fieldset>
             <fieldset>
               <Button>SEND MESSAGE</Button>
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
             </fieldset>
           </FormContainer>
           <InfoContainer>
             <div>
               <span>EMAIL</span>
               <a>info@yourdomain.com</a>
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
             </div>
             <div>
               <span>PHONE</span>
               <a>+12 345 6789 012</a>
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
             </div>
             <div>
               <span>ADDRESS</span>
@@ -52,6 +107,13 @@ const GetInTouch: React.FC = () => {
                 273 South Riverview Rd.
                 <br /> New York, NY 10011
               </a>
+              <AnimatedCover
+                animate={animate}
+                height={"100%"}
+                backgroundColor="#000"
+                seconds={2}
+                startVisible={true}
+              />
             </div>
           </InfoContainer>
         </main>

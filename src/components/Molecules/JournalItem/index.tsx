@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Content } from "./styles";
 
 interface JournalItemProps {
@@ -6,11 +6,22 @@ interface JournalItemProps {
   title: string;
   author: string;
   readTime: number;
+  animate?: boolean;
 }
 
 const JournalItem: React.FC<JournalItemProps> = (props) => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (!props.animate || show) {
+      return;
+    }
+
+    setTimeout(() => setShow(true), 800);
+  }, [props.animate, show]);
+
   return (
-    <Container>
+    <Container animate={props.animate} show={show}>
       <img src={props.image} alt={props.title || ""} />
       <Content>
         <section>

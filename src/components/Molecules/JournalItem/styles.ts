@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-interface ContainerProps {}
-
+interface ContainerProps {
+  animate?: boolean;
+  show?: boolean;
+}
 export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
@@ -11,6 +13,8 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
   font-weight: 300;
   padding: 10px;
+  opacity: ${(props) => (props.show ? "1" : "0")};
+  ${(props) => props.animate && `animation: up-item 1s normal;`}
 
   > img {
     position: relative;
@@ -20,6 +24,17 @@ export const Container = styled.div<ContainerProps>`
     max-height: 330px;
     object-fit: cover;
     /* width: 328px; */
+  }
+
+  @keyframes up-item {
+    0% {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 `;
 

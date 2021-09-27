@@ -56,6 +56,7 @@ export const FormContainer = styled.div<ContainerProps>`
     margin: 16px 0 40px 0;
     display: flex;
     width: 100%;
+    position: relative;
 
     > input {
       height: 24px;
@@ -121,6 +122,7 @@ export const InfoContainer = styled.div<ContainerProps>`
   > div {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     > span {
       font-weight: 800;
@@ -147,5 +149,77 @@ export const InfoContainer = styled.div<ContainerProps>`
 
   > :not(:last-child) {
     margin-bottom: 48px;
+  }
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  height: max-content;
+  /* width: max-content; */
+  width: 100%;
+  display: block;
+  :not(:last-child) {
+    margin-right: 32px;
+  }
+
+  > input {
+    height: 24px;
+    padding: 4px 0 16px 0;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+
+    ::placeholder {
+      opacity: 0.7;
+      color: rgba(255, 255, 255);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    :focus {
+      border-bottom: 1px solid rgba(255, 255, 255);
+
+      ::placeholder {
+        color: rgba(255, 255, 255);
+      }
+    }
+  }
+`;
+
+export const TextAreaContainer = styled.div`
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: block;
+
+  > textarea {
+    padding: 4px 0 16px 0;
+    width: 100%;
+    min-height: 180px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+
+    /* margin-right: 16px; */
+
+    ::placeholder {
+      opacity: 0.7;
+      color: rgba(255, 255, 255);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    :focus {
+      border-bottom: 1px solid rgba(255, 255, 255);
+
+      ::placeholder {
+        color: rgba(255, 255, 255);
+      }
+    }
   }
 `;
