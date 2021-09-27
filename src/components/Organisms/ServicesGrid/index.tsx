@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useAnimate from "../../../hooks/useAnimate";
 import useInView from "../../../hooks/useInView";
 import AnimatedCover from "../../Molecules/AnimatedCover";
@@ -9,6 +9,7 @@ import { Container } from "./styles";
 const ServicesGrid: React.FC = (props) => {
   const [ref, isInView] = useInView();
   const [animate] = useAnimate({ isInView: !!isInView });
+  const [animateItems, setAnimateItems] = useState([false, false, false]);
 
   const itemsList = [
     [
@@ -61,6 +62,42 @@ const ServicesGrid: React.FC = (props) => {
     ],
   ];
 
+  useEffect(() => {
+    if (!animate) {
+      return;
+    }
+
+    if (!animateItems[0]) {
+      setTimeout(() => {
+        setAnimateItems((animateItems) => {
+          const newAnimateItems = [...animateItems];
+          newAnimateItems[0] = true;
+          return newAnimateItems;
+        });
+      }, 200);
+    }
+
+    if (!animateItems[1]) {
+      setTimeout(() => {
+        setAnimateItems((animateItems) => {
+          const newAnimateItems = [...animateItems];
+          newAnimateItems[1] = true;
+          return newAnimateItems;
+        });
+      }, 350);
+    }
+
+    if (!animateItems[2]) {
+      setTimeout(() => {
+        setAnimateItems((animateItems) => {
+          const newAnimateItems = [...animateItems];
+          newAnimateItems[2] = true;
+          return newAnimateItems;
+        });
+      }, 500);
+    }
+  }, [animate, animateItems]);
+
   return (
     <Container id="services" ref={ref}>
       <Cover />
@@ -83,6 +120,7 @@ const ServicesGrid: React.FC = (props) => {
                     image={item.image}
                     title={item.title}
                     description={item.description}
+                    animate={animateItems[itemsIndex]}
                   />
                 </li>
               ))}
