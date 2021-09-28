@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import useInView from "../../../hooks/useInView";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import AnimatedCover from "../../Molecules/AnimatedCover";
@@ -12,7 +12,8 @@ interface Props {
 }
 
 const Hero: React.FC<Props> = (props) => {
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
+  const [, isInView] = useInView({ ref });
   const [animate] = useAnimate({ isInView: !!isInView });
 
   useEffect(() => {

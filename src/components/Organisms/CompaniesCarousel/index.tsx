@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import React, { useState, useRef, useEffect } from "react";
 import { Container } from "./styles";
 import Carousel from "nuka-carousel";
@@ -21,14 +23,20 @@ const CompaniesCarousel: React.FC = (props) => {
     "/paypal.png",
   ]);
 
-  const navigationNextRef = useRef(null);
+  const navigationNextRef = useRef<any>(null);
 
-  const [ref, isInView] = useInView();
+  const ref = useRef<any>(null);
+
+  const [, isInView] = useInView({ ref });
 
   const [animate] = useAnimate({ isInView: !!isInView });
 
   const nextPage = () => {
-    navigationNextRef.current.click();
+    if (!navigationNextRef?.current?.click) {
+      return;
+    }
+
+    navigationNextRef?.current?.click();
   };
 
   useEffect(() => {
@@ -52,6 +60,10 @@ const CompaniesCarousel: React.FC = (props) => {
             nextEl: navigationNextRef.current,
           }}
           onBeforeInit={(swiper) => {
+            if (!swiper?.params?.navigation?.nextEl) {
+              return;
+            }
+
             swiper.params.navigation.nextEl = navigationNextRef.current;
           }}
         >

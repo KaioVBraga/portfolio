@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Container, Input, Button } from "./styles";
+import React from "react";
+import { Container } from "./styles";
 
 interface Props {
   testimony: string;

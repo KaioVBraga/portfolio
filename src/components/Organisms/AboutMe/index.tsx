@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Button from "../../Atoms/Button";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import Cover from "../../Molecules/Cover";
@@ -9,7 +9,8 @@ import AnimatedContent from "../../Molecules/AnimatedContent";
 import AnimatedCover from "../../Molecules/AnimatedCover";
 
 const AboutMe: React.FC = (props) => {
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
+  const [, isInView] = useInView({ ref });
   const [animate] = useAnimate({ isInView: !!isInView });
   const [showImage, setShowImage] = useState(false);
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import useAnimate from "../../../hooks/useAnimate";
 import useInView from "../../../hooks/useInView";
 import AnimatedCover from "../../Molecules/AnimatedCover";
@@ -7,7 +7,8 @@ import ServiceItem from "../../Molecules/ServiceItem";
 import { Container } from "./styles";
 
 const ServicesGrid: React.FC = (props) => {
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
+  const [, isInView] = useInView({ ref });
   const [animate] = useAnimate({ isInView: !!isInView });
   const [animateItems, setAnimateItems] = useState([false, false, false]);
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import JournalItem from "../../Molecules/JournalItem";
 import Cover from "../../Molecules/Cover";
 import { Container } from "./styles";
@@ -7,7 +7,8 @@ import useAnimate from "../../../hooks/useAnimate";
 import useInView from "../../../hooks/useInView";
 
 const JournalGrid: React.FC = (props) => {
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
+  const [, isInView] = useInView({ ref });
   const [animate] = useAnimate({ isInView: !!isInView });
 
   const [animateItems, setAnimateItems] = useState([

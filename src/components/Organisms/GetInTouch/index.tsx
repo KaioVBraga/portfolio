@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import useAnimate from "../../../hooks/useAnimate";
 import useInView from "../../../hooks/useInView";
 import Button from "../../Atoms/Button";
@@ -14,7 +14,8 @@ import {
 } from "./styles";
 
 const GetInTouch: React.FC = () => {
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
+  const [, isInView] = useInView({ ref });
   const [animate] = useAnimate({ isInView: !!isInView });
 
   return (

@@ -1,7 +1,10 @@
+//@ts-nocheck
+
 import React, { useEffect, useState, useRef } from "react";
 
 interface Props {
   options?: any;
+  ref?: any;
 }
 
 const useInView = (
@@ -11,7 +14,7 @@ const useInView = (
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    if (!ref || !ref?.current) {
+    if ((!props?.ref || !props?.ref?.current) && (!ref || !ref?.current)) {
       return;
     }
 
@@ -25,7 +28,17 @@ const useInView = (
       setIsInView(!!entries[0].isIntersecting);
     }, options);
 
-    observer.observe(ref.current);
+    if (props?.ref) {
+      observer.observe(props?.ref.current);
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+
+    if (ref?.current) {
+      observer.observe(ref?.current);
+    }
 
     return () => {
       observer.disconnect();

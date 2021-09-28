@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useAnimate from "../../../hooks/useAnimate";
 import useInView from "../../../hooks/useInView";
 import AnimatedCover from "../../Molecules/AnimatedCover";
@@ -7,7 +7,8 @@ import SkillCounter from "../../Molecules/SkillCounter";
 import { Container } from "./styles";
 
 const SkillsGrid: React.FC = (props) => {
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
+  const [, isInView] = useInView({ ref });
 
   const [animateItems, setAnimateItems] = useState([
     false,

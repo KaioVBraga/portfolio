@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import type { NextPage } from "next";
 import { useRouter } from "next/dist/client/router";
 import React, { useState, useRef, useCallback, useEffect } from "react";
@@ -23,7 +25,7 @@ const Home: NextPage = () => {
   const [isDisplayingHero, setIsDisplayingHero] = useState(false);
   const ref = useRef(null);
 
-  const scrollTo = (destiny) => {
+  const scrollTo = (destiny: any) => {
     if (!ref?.current) {
       return;
     }

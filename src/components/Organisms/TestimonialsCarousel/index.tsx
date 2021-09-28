@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import React, { useState, useRef, useEffect } from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import Testimonial from "../../Molecules/Testimonial";

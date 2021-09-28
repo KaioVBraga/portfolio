@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import HeroNavbar from "../../Molecules/HeroNavbar";
 import ProjectItem from "../../Molecules/ProjectItem";
 import Cover from "../../Molecules/Cover";
@@ -72,7 +72,9 @@ const ProjectsGrid: React.FC = (props) => {
     ],
   ];
 
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
+
+  const [, isInView] = useInView({ ref });
   const [animate] = useAnimate({ isInView: !!isInView });
 
   return (
