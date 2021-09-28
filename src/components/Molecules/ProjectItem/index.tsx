@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Container, Cover } from "./styles";
 import { FaCopy } from "react-icons/fa";
 import AnimatedCover from "../AnimatedCover";

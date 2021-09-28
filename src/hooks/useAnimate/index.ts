@@ -13,8 +13,10 @@ const useAnimate = (props: Props) => {
       return;
     }
 
+    // setTimeout(() => {
     setAnimate(!!props.isInView);
     setAnimated(true);
+    // }, 500);
   }, [props.isInView, animated]);
 
   return [animate];

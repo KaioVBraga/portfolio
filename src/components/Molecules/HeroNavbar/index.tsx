@@ -44,7 +44,7 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
   ];
 
   return (
-    <Container displayNavbar={props.displayNavbar}>
+    <Container>
       <ItemsList align="right">
         {leftItems.map((item, index) => (
           <ListItem

@@ -4,7 +4,9 @@ interface Props {
   options?: any;
 }
 
-const useInView = (props: Props | null = null) => {
+const useInView = (
+  props: Props | null = null
+): Array<HTMLDivElement | boolean> => {
   const ref = useRef(null);
   const [isInView, setIsInView] = useState(false);
 
