@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
       </ItemsList>
 
       <h2>
-        Unfold<span>.</span>
+        Kaio Braga<span>.</span>
       </h2>
 
       <ItemsList align="left">

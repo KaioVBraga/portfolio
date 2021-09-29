@@ -38,6 +38,11 @@ export const Container = styled.div<ContainerProps>`
     margin-right: 71px !important;
     margin-top: -2px !important;
 
+    white-space: nowrap;
+
+    /* width: max-content !important;
+    margin-right: 11px !important; */
+
     > span {
       color: #d63447 !important;
     }

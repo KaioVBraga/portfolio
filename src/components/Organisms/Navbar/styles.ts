@@ -98,6 +98,8 @@ export const Container = styled.div<ContainerProps>`
     margin-top: -2px !important;
     color: #000 !important;
 
+    white-space: nowrap;
+
     > span {
       color: #d63447 !important;
     }
