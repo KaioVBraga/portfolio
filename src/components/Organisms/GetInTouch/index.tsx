@@ -82,7 +82,7 @@ const GetInTouch: React.FC = () => {
           <InfoContainer>
             <div>
               <span>EMAIL</span>
-              <a>info@yourdomain.com</a>
+              <a>kaiovbraga2001@gmail.com</a>
               <AnimatedCover
                 animate={animate}
                 height={"100%"}
@@ -93,7 +93,7 @@ const GetInTouch: React.FC = () => {
             </div>
             <div>
               <span>PHONE</span>
-              <a>+12 345 6789 012</a>
+              <a>+55 32 98848 4686</a>
               <AnimatedCover
                 animate={animate}
                 height={"100%"}
@@ -102,7 +102,7 @@ const GetInTouch: React.FC = () => {
                 startVisible={true}
               />
             </div>
-            <div>
+            {/* <div>
               <span>ADDRESS</span>
               <a>
                 273 South Riverview Rd.
@@ -115,7 +115,7 @@ const GetInTouch: React.FC = () => {
                 seconds={2}
                 startVisible={true}
               />
-            </div>
+            </div> */}
           </InfoContainer>
         </main>
       </section>

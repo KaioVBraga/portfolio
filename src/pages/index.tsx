@@ -50,12 +50,12 @@ const Home: NextPage = () => {
 
       <Hero setIsDisplayingHero={setIsDisplayingHero} scrollTo={scrollTo} />
       <ProjectsGrid />
-      <CompaniesCarousel />
+      {/* <CompaniesCarousel /> */}
       <AboutMe />
       <ServicesGrid />
-      <SkillsGrid />
-      <TestimonialsCarousel />
-      <JournalGrid />
+      {/* <SkillsGrid /> */}
+      {/* <TestimonialsCarousel /> */}
+      {/* <JournalGrid /> */}
       <GetInTouch />
       <FakeFooter />
       <Footer />

@@ -16,49 +16,46 @@ const ServicesGrid: React.FC = (props) => {
     [
       {
         image:
-          "	https://preview.colorlib.com/theme/unfold/images/svg/001-options.svg",
-        title: "Digital Strategy",
-        description:
-          "A small river named Duden flows by their place and supplies it with the necessary regalialia.",
+          "https://preview.colorlib.com/theme/unfold/images/svg/002-chat.svg",
+
+        title: "Javascript",
+        description: "General knowledge",
       },
       {
         image:
           "https://preview.colorlib.com/theme/unfold/images/svg/004-percentage.svg",
-        title: "Web Development",
-        description:
-          "A small river named Duden flows by their place and supplies it with the necessary regalialia.",
+        title: "Node.js",
+        description: "Worked with building and maintaining web api's.",
       },
     ],
     [
       {
         image:
-          "https://preview.colorlib.com/theme/unfold/images/svg/002-chat.svg",
-        title: "Web Design",
-        description:
-          "A small river named Duden flows by their place and supplies it with the necessary regalialia.",
+          "https://preview.colorlib.com/theme/unfold/images/svg/001-options.svg",
+        title: "PHP",
+        description: "General knowledge",
       },
       {
         image:
           "https://preview.colorlib.com/theme/unfold/images/svg/006-goal.svg",
-        title: "WordPress Solutions",
-        description:
-          "A small river named Duden flows by their place and supplies it with the necessary regalialia.",
+        title: "React.js",
+        description: "Worked with building and maintaining web pages.",
       },
     ],
     [
       {
         image:
-          "https://preview.colorlib.com/theme/unfold/images/svg/003-contact-book.svg",
-        title: "User Experience",
-        description:
-          "A small river named Duden flows by their place and supplies it with the necessary regalialia.",
+          "https://preview.colorlib.com/theme/unfold/images/svg/005-line-chart.svg",
+
+        title: "Python",
+        description: "General knowledge",
       },
       {
         image:
-          "https://preview.colorlib.com/theme/unfold/images/svg/005-line-chart.svg",
-        title: "Mobile Applications",
-        description:
-          "A small river named Duden flows by their place and supplies it with the necessary regalialia.",
+          "https://preview.colorlib.com/theme/unfold/images/svg/004-percentage.svg",
+
+        title: "Next.js",
+        description: "Worked with building and maintaining web pages.",
       },
     ],
   ];
@@ -104,7 +101,7 @@ const ServicesGrid: React.FC = (props) => {
       <Cover />
       <section>
         <header>
-          <h1>My Services</h1>
+          <h1>My Skills</h1>
           <img src="/underline.png" />
           <AnimatedCover
             animate={animate}

@@ -9,33 +9,24 @@ const Footer: React.FC = () => {
       <section>
         <header>
           <h1>
-            Unfold<span>.</span>
+            Kaio Braga<span>.</span>
           </h1>
         </header>
         <nav>
           <ul>
             <li>
-              <a href="#">Facebook</a>
+              <a href="#">Github</a>
             </li>
             <li>
-              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
             </li>
             <li>
               <a href="#">Instagram</a>
             </li>
-            <li>
-              <a href="#">Dribble</a>
-            </li>
-            <li>
-              <a href="#">Behance</a>
-            </li>
           </ul>
         </nav>
         <main>
-          <p>
-            Copyright © 2021 All rights reserved | This template is made with{" "}
-            {"<"}3 by Colorlib
-          </p>
+          <p>© 2021 | Made with {"<"}3 by Kaio Braga</p>
         </main>
       </section>
     </Container>

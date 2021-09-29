@@ -29,14 +29,14 @@ const Hero: React.FC<Props> = (props) => {
         <section>
           <h1>
             <AnimatedContent animate={animate} seconds={1}>
-              Unfold
+              Kaio Braga
             </AnimatedContent>
             <AnimatedCover animate={animate} />
           </h1>
           <p>
             <AnimatedContent animate={animate} seconds={1}>
-              I’m Glenn Chapman Hoyer A Product
-              <br /> Designer Based In San Francisco
+              Eu sou Kaio V. Braga um
+              <br /> Programador FullStack
             </AnimatedContent>
             <AnimatedCover animate={animate} />
           </p>
