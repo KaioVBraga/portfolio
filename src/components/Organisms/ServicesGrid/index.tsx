@@ -16,46 +16,47 @@ const ServicesGrid: React.FC = (props) => {
     [
       {
         image:
-          "https://preview.colorlib.com/theme/unfold/images/svg/002-chat.svg",
-
-        title: "Javascript",
-        description: "General knowledge",
-      },
-      {
-        image:
           "https://preview.colorlib.com/theme/unfold/images/svg/004-percentage.svg",
         title: "Node.js",
         description: "Worked with building and maintaining web api's.",
       },
+      {
+        image:
+          "https://preview.colorlib.com/theme/unfold/images/svg/006-goal.svg",
+
+        title: "Scrum",
+        description: "Soft Skill aqcuired during working in projects.",
+      },
     ],
     [
+      {
+        image:
+          "https://preview.colorlib.com/theme/unfold/images/svg/002-chat.svg",
+
+        title: "React.js",
+        description: "Worked with building and maintaining web pages.",
+      },
       {
         image:
           "https://preview.colorlib.com/theme/unfold/images/svg/001-options.svg",
         title: "PHP",
-        description: "General knowledge",
-      },
-      {
-        image:
-          "https://preview.colorlib.com/theme/unfold/images/svg/006-goal.svg",
-        title: "React.js",
-        description: "Worked with building and maintaining web pages.",
+        description: "Worked with maintaining web pages.",
       },
     ],
     [
-      {
-        image:
-          "https://preview.colorlib.com/theme/unfold/images/svg/005-line-chart.svg",
-
-        title: "Python",
-        description: "General knowledge",
-      },
       {
         image:
           "https://preview.colorlib.com/theme/unfold/images/svg/004-percentage.svg",
 
         title: "Next.js",
         description: "Worked with building and maintaining web pages.",
+      },
+      {
+        image:
+          "https://preview.colorlib.com/theme/unfold/images/svg/005-line-chart.svg",
+
+        title: "Python",
+        description: "Worked in personal projects",
       },
     ],
   ];

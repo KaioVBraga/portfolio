@@ -14,29 +14,30 @@ const HeroNavbar: React.FC<HeroNavbarProps> = (props) => {
       text: "Portfolio",
       destiny: "projects",
     },
-    {
-      text: "About",
-      destiny: "about",
-    },
-    {
-      text: "Services",
-      destiny: "services",
-    },
+    // {
+    //   text: "About",
+    //   destiny: "about",
+    // },
+    // {
+    //   text: "Services",
+    //   destiny: "services",
+    // },
   ];
 
   const rightItems = [
     {
       text: "Skills",
-      destiny: "skills",
+      // destiny: "skills",
+      destiny: "services",
     },
-    {
-      text: "Testimonial",
-      destiny: "testimonial",
-    },
-    {
-      text: "Journal",
-      destiny: "journal",
-    },
+    // {
+    //   text: "Testimonial",
+    //   destiny: "testimonial",
+    // },
+    // {
+    //   text: "Journal",
+    //   destiny: "journal",
+    // },
     {
       text: "Contact",
       destiny: "get-in-touch",

@@ -15,13 +15,15 @@ const Footer: React.FC = () => {
         <nav>
           <ul>
             <li>
-              <a href="#">Github</a>
+              <a href="https://github.com/KaioVBraga">Github</a>
             </li>
             <li>
-              <a href="#">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/kaio-vinycius-braga-dos-santos-0166851b4/">
+                LinkedIn
+              </a>
             </li>
             <li>
-              <a href="#">Instagram</a>
+              <a href="https://www.instagram.com/kaiovbraga/">Instagram</a>
             </li>
           </ul>
         </nav>

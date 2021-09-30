@@ -51,13 +51,13 @@ const Home: NextPage = () => {
       <Hero setIsDisplayingHero={setIsDisplayingHero} scrollTo={scrollTo} />
       <ProjectsGrid />
       {/* <CompaniesCarousel /> */}
-      <AboutMe />
+      {/* <AboutMe /> */}
       <ServicesGrid />
       {/* <SkillsGrid /> */}
       {/* <TestimonialsCarousel /> */}
       {/* <JournalGrid /> */}
       <GetInTouch />
-      <FakeFooter />
+      {/* <FakeFooter /> */}
       <Footer />
     </TemplateHome>
   );

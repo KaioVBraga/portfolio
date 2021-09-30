@@ -56,9 +56,7 @@ const AboutMe: React.FC = (props) => {
               />
             </h3>
             <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there <a href="#">live the blind</a>{" "}
-              texts.
+              Worked for one year and half at Voitto.
               <AnimatedCover
                 animate={animate}
                 height={"100%"}
@@ -67,7 +65,7 @@ const AboutMe: React.FC = (props) => {
                 startVisible={true}
               />
             </p>
-            <p>
+            {/* <p>
               A small river named Duden flows by their place and supplies it
               with the necessary regelialia. It is a paradisematic country, in
               which roasted parts of sentences fly into your mouth.
@@ -78,7 +76,7 @@ const AboutMe: React.FC = (props) => {
                 seconds={2}
                 startVisible={true}
               />
-            </p>
+            </p> */}
             <p>
               <Button>DOWNLOAD MY CV</Button>
               <AnimatedCover

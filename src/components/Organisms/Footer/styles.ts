@@ -13,10 +13,10 @@ export const Container = styled.div<ContainerProps>`
   color: #fff;
   padding: 0 64px 150px 100px;
 
-  position: fixed;
-  /* position: relative; */
+  /* position: fixed; */
+  position: relative;
   bottom: 0px;
-  z-index: -1;
+  /* z-index: -1; */
 
   /* position: fixed;
   z-index: 50;
@@ -68,6 +68,7 @@ export const Container = styled.div<ContainerProps>`
             letter-spacing: 0.1rem;
             color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
+            cursor: pointer;
           }
         }
       }

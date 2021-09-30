@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { Container, Cover } from "./styles";
 import { FaCopy } from "react-icons/fa";
 import AnimatedCover from "../AnimatedCover";
@@ -11,6 +11,7 @@ interface ProjectItemProps {
   description?: string;
   image: string;
   animate?: any;
+  href?: string;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = (props) => {
@@ -18,6 +19,14 @@ const ProjectItem: React.FC<ProjectItemProps> = (props) => {
   const [, isInView] = useInView({ ref });
   const [animate] = useAnimate({ isInView: !!isInView });
   const [show, setShow] = useState(false);
+
+  const handleClick = useCallback(() => {
+    if (!props.href) {
+      return;
+    }
+
+    window.open(props.href);
+  }, [props]);
 
   useEffect(() => {
     if (!animate || show) {
@@ -32,6 +41,7 @@ const ProjectItem: React.FC<ProjectItemProps> = (props) => {
       ref={ref}
       animate={props.animate !== null ? props.animate : animate}
       show={show}
+      onClick={handleClick}
     >
       <Cover>
         <header>

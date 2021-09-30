@@ -35,8 +35,7 @@ const Hero: React.FC<Props> = (props) => {
           </h1>
           <p>
             <AnimatedContent animate={animate} seconds={1}>
-              Eu sou Kaio V. Braga um
-              <br /> Programador FullStack
+              FullStack Web Developer
             </AnimatedContent>
             <AnimatedCover animate={animate} />
           </p>

@@ -10,4 +10,5 @@ export const Container = styled.div<ContainerProps>`
   min-height: 400px !important;
   position: relative;
   display: block;
+  z-index: -10;
 `;
