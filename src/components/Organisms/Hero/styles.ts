@@ -133,7 +133,8 @@ export const Container = styled.div<ContainerProps>`
     background-size: contain;
     background-color: #000;
     background-position: 14% 49%;
-    filter: grayscale(100%);
+    filter: contrast(1.15) brightness(0.8) grayscale(100%);
+    /* filter: grayscale(100%); */
 
     position: absolute;
     top: 0;
