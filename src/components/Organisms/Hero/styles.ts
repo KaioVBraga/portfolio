@@ -84,7 +84,7 @@ export const Container = styled.div<ContainerProps>`
     }
   }
 
-  :before {
+  /* :before {
     width: 100%;
     min-width: 100vw;
     height: 100%;
@@ -94,7 +94,46 @@ export const Container = styled.div<ContainerProps>`
     background-image: url("https://preview.colorlib.com/theme/unfold/images/xcover_bg_2.jpg.pagespeed.ic.80gbjoZ17c.webp");
     background-size: cover;
     background-position: 50% 49%;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0;
+    left: -3%;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+
+    z-index: -1;
+    transform-origin: center center 0;
+    transform: translate3d(0px, 0px, -5px) scale(5.95);
+
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+  } */
+
+  :before {
+    width: 100%;
+    min-width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    display: block;
+
+    /* background-image: url("https://preview.colorlib.com/theme/unfold/images/xcover_bg_2.jpg.pagespeed.ic.80gbjoZ17c.webp"); */
+    /* background-size: cover; */
+    /* background-position: 50% 49%; */
+    background-repeat: no-repeat;
+
+    /* background-image: url("/background-body.png");
+    background-size: cover; */
+    background-image: url("/background-face.png");
+    background-size: contain;
+    background-color: #000;
+    background-position: 14% 49%;
+    filter: grayscale(100%);
 
     position: absolute;
     top: 0;
@@ -108,12 +147,7 @@ export const Container = styled.div<ContainerProps>`
     transform-origin: center center 0;
     /* transform: translateZ(-5px) scale(6); */
     transform: translate3d(0px, 0px, -5px) scale(5.95);
-
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+    image-rendering: optimizeQuality;
   }
 
   @media screen and (min-height: 600px) {
