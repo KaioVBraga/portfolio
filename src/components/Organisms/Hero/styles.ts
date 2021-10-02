@@ -25,7 +25,8 @@ export const Container = styled.div<ContainerProps>`
     flex-direction: column;
     min-height: 100%;
     /* padding-bottom: 98px; */
-    padding-bottom: 118px;
+    /* padding-bottom: 118px; */
+    padding-bottom: 168px;
     z-index: 2;
 
     > section {
@@ -129,12 +130,22 @@ export const Container = styled.div<ContainerProps>`
 
     /* background-image: url("/background-body.png");
     background-size: cover; */
-    background-image: url("/background-face.png");
-    background-size: contain;
+    /* background-image: url("/background-face.png");
+    filter: contrast(1.15) brightness(0.8) grayscale(100%); */
+    /* background-image: url("/max-saeling-ef0sXQtnCYU-unsplash.jpg"); */
+    /* filter: grayscale(70%); */
+    /* background-image: url("/patrick-hendry-9IJqtCeWim8-unsplash.jpg"); */
+    /* background-image: url("/burning-sky-1183498.jpg"); */
+    /* background-image: url("/jake-weirick-Zu6wtAvLWgE-unsplash.jpg"); */
+    /* background-image: url("/christopher-gower-m_HRfLhgABo-unsplash.jpg"); */
+    /* background-image: url("/nate-grant-QQ9LainS6tI-unsplash.jpg"); */
+    /* background-image: url("/artificial-intelligence-g961a1b044_1920.jpg"); */
+    background-image: url("/workspace-ga789659db_1920.jpg");
+    filter: grayscale(80%);
+    background-size: cover;
     background-color: #000;
-    background-position: 14% 49%;
-    filter: contrast(1.15) brightness(0.8) grayscale(100%);
-    /* filter: grayscale(100%); */
+    /* background-position: 14% 49%; */
+    background-position: 14% 75%;
 
     position: absolute;
     top: 0;
@@ -171,7 +182,7 @@ export const Finger = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 64px;
-  top: 60px;
+  top: 110px;
 
   :after {
     content: "SCROLL";
